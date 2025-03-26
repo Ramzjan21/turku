@@ -14,91 +14,91 @@ quiz_katalogu = {"A1": [], "A2": [], "B1": [], "B2": []}
 def quiz_dosyalarini_yukle(dizin="quizzes"):
     global quiz_katalogu
     quiz_katalogu = {"A1": [], "A2": [], "B1": [], "B2": []}
-    bolimlar = ["A1", "A2", "B1", "B2"]
+    bolumler = ["A1", "A2", "B1", "B2"]
     
     if not os.path.exists(dizin):
         os.makedirs(dizin)
     
-    for bolim in bolimlar:
-        bolim_dizini = os.path.join(dizin, bolim)
-        if not os.path.exists(bolim_dizini):
-            os.makedirs(bolim_dizini)
+    for bolum in bolumler:
+        bolum_dizini = os.path.join(dizin, bolum)
+        if not os.path.exists(bolum_dizini):
+            os.makedirs(bolum_dizini)
         
-        for dosya_adi in os.listdir(bolim_dizini):
+        for dosya_adi in os.listdir(bolum_dizini):
             if dosya_adi.endswith(".json"):
-                dosya_yolu = os.path.join(bolim_dizini, dosya_adi)
+                dosya_yolu = os.path.join(bolum_dizini, dosya_adi)
                 try:
                     with open(dosya_yolu, "r", encoding="utf-8") as dosya:
                         quiz_verileri = json.load(dosya)
                         if "name" in quiz_verileri and "questions" in quiz_verileri:
-                            quiz_verileri["bolim"] = bolim  # Bo‘limni qo‘shish
-                            quiz_katalogu[bolim].append(quiz_verileri)
+                            quiz_verileri["bolum"] = bolum  # Bölüm ekleniyor
+                            quiz_katalogu[bolum].append(quiz_verileri)
                 except (json.JSONDecodeError, FileNotFoundError) as hata:
-                    print(f"{bolim}/{dosya_adi} dosyasını okurken hata: {hata}")
+                    print(f"{bolum}/{dosya_adi} dosyasını okurken hata: {hata}")
 
 async def bot_komutlarini_ayarla(bot):
     komutlar = [
-        BotCommand("start", "Testni boshlash"),
-        BotCommand("restart", "Testni qayta boshlash"),
-        BotCommand("stop", "Testni to‘xtatish"),
-        BotCommand("quizlist", "Test ro‘yxati")
+        BotCommand("start", "Testi başlat"),
+        BotCommand("restart", "Testi yeniden başlat"),
+        BotCommand("stop", "Testi durdur"),
+        BotCommand("quizlist", "Test listesi")
     ]
     await bot.set_my_commands(komutlar)
 
 async def start(update: Update, context: CallbackContext) -> None:
     quiz_dosyalarini_yukle()
-    if not any(quiz_katalogu[bolim] for bolim in quiz_katalogu):
-        await update.message.reply_text("Xato! Hech qanday quiz fayli topilmadi.")
+    if not any(quiz_katalogu[bolum] for bolum in quiz_katalogu):
+        await update.message.reply_text("Hata! Hiçbir test dosyası bulunamadı.")
         return
 
     if context.args and len(context.args) > 0 and context.args[0].startswith("quiz_"):
         try:
             quiz_idx = int(context.args[0].split("_")[1])
-            bolim = context.args[0].split("_")[2]  # Bo‘lim qo‘shildi
-            await aralik_secimi_goster(update, context, update.message.chat_id, bolim, quiz_idx)
+            bolum = context.args[0].split("_")[2]  # Bölüm eklendi
+            await aralik_secimi_goster(update, context, update.message.chat_id, bolum, quiz_idx)
             return
         except (IndexError, ValueError):
             pass
 
-    await bolimlarni_goster(update, context, update.message.chat_id)
+    await bolumleri_goster(update, context, update.message.chat_id)
 
 async def quiz_listesi(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
-    await bolimlarni_goster(update, context, sohbet_id)
+    await bolumleri_goster(update, context, sohbet_id)
 
-async def bolimlarni_goster(update: Update, context: CallbackContext, sohbet_id: int) -> None:
+async def bolumleri_goster(update: Update, context: CallbackContext, sohbet_id: int) -> None:
     quiz_dosyalarini_yukle()
     klavye = [
-        [InlineKeyboardButton("A1", callback_data="bolim_A1")],
-        [InlineKeyboardButton("A2", callback_data="bolim_A2")],
-        [InlineKeyboardButton("B1", callback_data="bolim_B1")],
-        [InlineKeyboardButton("B2", callback_data="bolim_B2")]
+        [InlineKeyboardButton("A1", callback_data="bolum_A1")],
+        [InlineKeyboardButton("A2", callback_data="bolum_A2")],
+        [InlineKeyboardButton("B1", callback_data="bolum_B1")],
+        [InlineKeyboardButton("B2", callback_data="bolum_B2")]
     ]
     cevap_isareti = InlineKeyboardMarkup(klavye)
-    await context.bot.send_message(sohbet_id, "Bo‘limlardan birini tanlang:", reply_markup=cevap_isareti)
+    await context.bot.send_message(sohbet_id, "Aşağıdaki bölümlerden birini seçin:", reply_markup=cevap_isareti)
 
-async def quiz_listesini_goster(update: Update, context: CallbackContext, sohbet_id: int, bolim: str) -> None:
+async def quiz_listesini_goster(update: Update, context: CallbackContext, sohbet_id: int, bolum: str) -> None:
     quiz_dosyalarini_yukle()
-    if not quiz_katalogu[bolim]:
-        await context.bot.send_message(sohbet_id, f"{bolim} bo‘limida hech qanday quiz topilmadi.")
+    if not quiz_katalogu[bolum]:
+        await context.bot.send_message(sohbet_id, f"{bolum} bölümünde hiçbir test bulunamadı.")
         return
 
     klavye = []
-    for idx, quiz in enumerate(quiz_katalogu[bolim]):
+    for idx, quiz in enumerate(quiz_katalogu[bolum]):
         klavye.append([
-            InlineKeyboardButton(f"📖 {quiz['name']}", callback_data=f"select_quiz_{idx}_{bolim}"),
-            InlineKeyboardButton("📤 Ulashish", switch_inline_query=f"Test: {quiz['name']} - https://t.me/{context.bot.username}?start=quiz_{idx}_{bolim}")
+            InlineKeyboardButton(f"📖 {quiz['name']}", callback_data=f"select_quiz_{idx}_{bolum}"),
+            InlineKeyboardButton("📤 Paylaş", switch_inline_query=f"Test: {quiz['name']} - https://t.me/{context.bot.username}?start=quiz_{idx}_{bolum}")
         ])
 
     cevap_isareti = InlineKeyboardMarkup(klavye)
-    await context.bot.send_message(sohbet_id, f"{bolim} bo‘limidagi quizlardan birini tanlang:", reply_markup=cevap_isareti)
+    await context.bot.send_message(sohbet_id, f"{bolum} bölümündeki testlerden birini seçin:", reply_markup=cevap_isareti)
 
-async def aralik_secimi_goster(update: Update, context: CallbackContext, sohbet_id: int, bolim: str, quiz_idx: int) -> None:
-    if bolim not in quiz_katalogu or quiz_idx >= len(quiz_katalogu[bolim]):
-        await context.bot.send_message(sohbet_id, "Xato! Tanlangan quiz topilmadi.")
+async def aralik_secimi_goster(update: Update, context: CallbackContext, sohbet_id: int, bolum: str, quiz_idx: int) -> None:
+    if bolum not in quiz_katalogu or quiz_idx >= len(quiz_katalogu[bolum]):
+        await context.bot.send_message(sohbet_id, "Hata! Seçilen test bulunamadı.")
         return
 
-    quiz_verileri = quiz_katalogu[bolim][quiz_idx]
+    quiz_verileri = quiz_katalogu[bolum][quiz_idx]
     toplam_soru = len(quiz_verileri["questions"])
 
     araliklar = []
@@ -108,15 +108,15 @@ async def aralik_secimi_goster(update: Update, context: CallbackContext, sohbet_
         araliklar.append((baslangic, bitis))
 
     if not araliklar:
-        await context.bot.send_message(sohbet_id, "Xato! Bu quizda yetarli savol yo‘q.")
+        await context.bot.send_message(sohbet_id, "Hata! Bu testte yeterli soru yok.")
         return
 
     klavye = [
-        [InlineKeyboardButton(f"{baslangic + 1}-{bitis}", callback_data=f"start_quiz_{quiz_idx}_{bolim}_{baslangic}_{bitis}")]
+        [InlineKeyboardButton(f"{baslangic + 1}-{bitis}", callback_data=f"start_quiz_{quiz_idx}_{bolum}_{baslangic}_{bitis}")]
         for baslangic, bitis in araliklar
     ]
     cevap_isareti = InlineKeyboardMarkup(klavye)
-    await context.bot.send_message(sohbet_id, f"{quiz_verileri['name']} uchun savol oralig‘ini tanlang:", reply_markup=cevap_isareti)
+    await context.bot.send_message(sohbet_id, f"{quiz_verileri['name']} için soru aralığını seçin:", reply_markup=cevap_isareti)
 
 async def dugme_yonetici(update: Update, context: CallbackContext) -> None:
     sorgu = update.callback_query
@@ -125,21 +125,21 @@ async def dugme_yonetici(update: Update, context: CallbackContext) -> None:
     sohbet_id = sorgu.message.chat_id
     veri = sorgu.data
 
-    if veri.startswith("bolim_"):
-        bolim = veri.split("_")[1]
-        await quiz_listesini_goster(update, context, sohbet_id, bolim)
+    if veri.startswith("bolum_"):
+        bolum = veri.split("_")[1]
+        await quiz_listesini_goster(update, context, sohbet_id, bolum)
     elif veri.startswith("select_quiz_"):
         parcalar = veri.split("_")
         quiz_idx = int(parcalar[2])
-        bolim = parcalar[3]
-        await aralik_secimi_goster(update, context, sohbet_id, bolim, quiz_idx)
+        bolum = parcalar[3]
+        await aralik_secimi_goster(update, context, sohbet_id, bolum, quiz_idx)
     elif veri.startswith("start_quiz_"):
         parcalar = veri.split("_")
         quiz_idx = int(parcalar[2])
-        bolim = parcalar[3]
+        bolum = parcalar[3]
         baslangic_idx = int(parcalar[4])
         bitis_idx = int(parcalar[5])
-        await quiz_gonder(update, context, sohbet_id, bolim, quiz_idx, baslangic_idx, bitis_idx)
+        await quiz_gonder(update, context, sohbet_id, bolum, quiz_idx, baslangic_idx, bitis_idx)
     elif veri == "restart_quiz":
         await yeniden_baslat(update, context)
     elif veri == "stop_quiz":
@@ -148,39 +148,39 @@ async def dugme_yonetici(update: Update, context: CallbackContext) -> None:
 async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.effective_chat.id
     if sohbet_id not in kullanici_verileri:
-        await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q. Testni boshlash uchun quiz tanlang.")
+        await context.bot.send_message(sohbet_id, "Şu anda aktif bir test yok. Testi başlatmak için bir test seçin.")
         return
 
-    bolim = kullanici_verileri[sohbet_id]["bolim"]
+    bolum = kullanici_verileri[sohbet_id]["bolum"]
     quiz_idx = kullanici_verileri[sohbet_id]["quiz_idx"]
     baslangic_idx = kullanici_verileri[sohbet_id]["start_idx"]
     bitis_idx = kullanici_verileri[sohbet_id]["end_idx"]
     await gorevleri_temizle(sohbet_id)
     del kullanici_verileri[sohbet_id]
-    await quiz_gonder(update, context, sohbet_id, bolim, quiz_idx, baslangic_idx, bitis_idx)
-    await context.bot.send_message(sohbet_id, "Test qayta boshlandi!")
+    await quiz_gonder(update, context, sohbet_id, bolum, quiz_idx, baslangic_idx, bitis_idx)
+    await context.bot.send_message(sohbet_id, "Test yeniden başlatıldı!")
 
 async def durdur(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.effective_chat.id
     if sohbet_id not in kullanici_verileri:
-        await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q. Testni boshlash uchun quiz tanlang.")
+        await context.bot.send_message(sohbet_id, "Şu anda aktif bir test yok. Testi başlatmak için bir test seçin.")
         return
 
     await quiz_bitir(update, context, sohbet_id)
-    await context.bot.send_message(sohbet_id, "Test to‘xtatildi!")
+    await context.bot.send_message(sohbet_id, "Test durduruldu!")
 
-async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, bolim: str, quiz_idx: int, baslangic_idx: int, bitis_idx: int) -> None:
-    if bolim not in quiz_katalogu or quiz_idx >= len(quiz_katalogu[bolim]):
-        await context.bot.send_message(sohbet_id, "Xato! Tanlangan quiz topilmadi.")
+async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, bolum: str, quiz_idx: int, baslangic_idx: int, bitis_idx: int) -> None:
+    if bolum not in quiz_katalogu or quiz_idx >= len(quiz_katalogu[bolum]):
+        await context.bot.send_message(sohbet_id, "Hata! Seçilen test bulunamadı.")
         return
 
-    quiz_verileri = quiz_katalogu[bolim][quiz_idx]
+    quiz_verileri = quiz_katalogu[bolum][quiz_idx]
     toplam_soru = len(quiz_verileri["questions"])
     if baslangic_idx >= toplam_soru or bitis_idx > toplam_soru or baslangic_idx >= bitis_idx:
-        await context.bot.send_message(sohbet_id, "Xato! Noto‘g‘ri oralik tanlandi.")
+        await context.bot.send_message(sohbet_id, "Hata! Geçersiz aralık seçildi.")
         return
 
-    await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi boshlanmoqda! ({baslangic_idx + 1}-{bitis_idx} savollar)")
+    await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi başlıyor! ({baslangic_idx + 1}-{bitis_idx} sorular)")
 
     sorular = quiz_verileri["questions"][baslangic_idx:bitis_idx].copy()
     random.shuffle(sorular)
@@ -188,7 +188,7 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
     kullanici_verileri[sohbet_id] = {
         "skor": 0,
         "mevcut_soru": 0,
-        "bolim": bolim,
+        "bolum": bolum,
         "quiz_idx": quiz_idx,
         "start_idx": baslangic_idx,
         "end_idx": bitis_idx,
@@ -225,8 +225,8 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
         kullanici["anket_mesajlari"][anket_mesaji.poll.id] = kullanici["mevcut_soru"]
         kullanici["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
 
-        zamanlayici_mesaji = await context.bot.send_message(sohbet_id, f"Qolgan vaqt: {bekleme_suresi} soniya")
-        kullanici["son_zamanlayici_metin"] = f"Qolgan vaqt: {bekleme_suresi} soniya"
+        zamanlayici_mesaji = await context.bot.send_message(sohbet_id, f"Kalan süre: {bekleme_suresi} saniye")
+        kullanici["son_zamanlayici_metin"] = f"Kalan süre: {bekleme_suresi} saniye"
 
         await gorevleri_temizle(sohbet_id)
 
@@ -242,7 +242,7 @@ async def zamanlayiciyi_guncelle(update: Update, context: CallbackContext, sohbe
             return
 
         for kalan in range(bekleme_suresi, -1, -1):
-            yeni_metin = f"Qolgan vaqt: {kalan} soniya"
+            yeni_metin = f"Kalan süre: {kalan} saniye"
             if yeni_metin != kullanici.get("son_zamanlayici_metin"):
                 await context.bot.edit_message_text(
                     chat_id=sohbet_id,
@@ -254,14 +254,14 @@ async def zamanlayiciyi_guncelle(update: Update, context: CallbackContext, sohbe
     except asyncio.CancelledError:
         pass
     except Exception as hata:
-        print(f"Vaqtni yangilashda xato: {hata}")
+        print(f"Zamanlayıcı güncelleme hatası: {hata}")
 
 async def soru_atlama(update: Update, context: CallbackContext, sohbet_id: int, bekleme_suresi: int):
     try:
         await asyncio.sleep(bekleme_suresi)
         kullanici = kullanici_verileri.get(sohbet_id)
         if kullanici and kullanici["mevcut_soru"] < len(kullanici["questions"]):
-            await context.bot.send_message(sohbet_id, "Vaqt tugadi! Bu savol noto‘g‘ri deb belgilandi.")
+            await context.bot.send_message(sohbet_id, "Süre bitti! Bu soru yanlış olarak işaretlendi.")
             kullanici["mevcut_soru"] += 1
             await sonraki_soruyu_gonder(update, context, sohbet_id)
     except asyncio.CancelledError:
@@ -276,7 +276,7 @@ async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
     toplam = len(kullanici["questions"])
     await context.bot.send_message(
         chat_id=sohbet_id,
-        text=f"Test yakunlandi! Natijangiz: {skor}/{toplam}"
+        text=f"Test tamamlandı! Sonucunuz: {skor}/{toplam}"
     )
     await gorevleri_temizle(sohbet_id)
     del kullanici_verileri[sohbet_id]
@@ -296,7 +296,7 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
 
     kullanici = kullanici_verileri.get(sohbet_id)
     if not kullanici or anket_id not in kullanici["anket_mesajlari"]:
-        await context.bot.send_message(sohbet_id, "Bu test allaqachon yakunlangan yoki boshlanmagan!")
+        await context.bot.send_message(sohbet_id, "Bu test zaten tamamlanmış veya başlatılmamış!")
         return
 
     await gorevleri_temizle(sohbet_id)
@@ -304,9 +304,9 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
     dogru_secenek_id = kullanici["dogru_secenek_idleri"][anket_id]
     if cevap == dogru_secenek_id:
         kullanici["skor"] += 1
-        await context.bot.send_message(sohbet_id, "To‘g‘ri javob!")
+        await context.bot.send_message(sohbet_id, "Doğru cevap!")
     else:
-        await context.bot.send_message(sohbet_id, "Noto‘g‘ri javob!")
+        await context.bot.send_message(sohbet_id, "Yanlış cevap!")
 
     kullanici["mevcut_soru"] += 1
     await sonraki_soruyu_gonder(update, context, sohbet_id)
@@ -354,7 +354,7 @@ def main():
     signal.signal(signal.SIGINT, sinyal_yonetici)
     signal.signal(signal.SIGTERM, sinyal_yonetici)
 
-    print("Bot ishga tushdi! 🚀")
+    print("Bot başlatıldı! 🚀")
     uygulama.run_polling()
 
 if __name__ == "__main__":
