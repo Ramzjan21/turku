@@ -2,1603 +2,746 @@
   "name": "Unit 1",
   "questions": [
     {
-      "question": "agaç nima?",
-      "answers": ["daraxt", "do'st", "mashina", "kompyuter"],
+      "question": "abone nima?",
+      "answers": ["obuna", "qarz", "tölo‘v", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "arkadas nima?",
-      "answers": ["bog‘", "do'st", "chaqaloq", "bank"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "anneler günü nima?",
-      "answers": ["bayram", "onalar kuni", "oqshom", "avgust"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "Afrika nima?",
-      "answers": ["Osiyo", "Yevropa", "Afrika", "Avstraliya"],
-      "correct_answer": 2,
-      "time": 10
-    },
-    {
-      "question": "agustos nima?",
-      "answers": ["dekabr", "avgust", "oq", "kam"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "aksam nima?",
-      "answers": ["oqshom", "aktyor", "baliq", "stakan"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "aktör nima?",
-      "answers": ["nemis", "aktyor", "advokat", "janob"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "alkol nima?",
-      "answers": ["alkogol (spirt)", "bilet", "bank", "kompyuter"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Alman nima?",
-      "answers": ["nemis", "arab", "alban", "Osiyo"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Almanya nima?",
-      "answers": ["Germaniya", "Amerika", "Avstriya", "Avstraliya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Amerika nima?",
-      "answers": ["Osiyo", "Yevropa", "Amerika", "Afrika"],
-      "correct_answer": 2,
-      "time": 10
-    },
-    {
-      "question": "araba nima?",
-      "answers": ["mashina (avtomobil)", "stakan", "bog‘", "dada"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "aralik nima?",
-      "answers": ["avgust", "dekabr", "oqshom", "baliq"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "Arap nima?",
-      "answers": ["arab", "nemis", "alban", "Avstriya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Arnavut nima?",
-      "answers": ["Albaniya", "Germaniya", "Osiyo", "Yevropa"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Arnavutluk nima?",
-      "answers": ["alban", "arab", "nemis", "janob"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Asya nima?",
-      "answers": ["Osiyo", "Yevropa", "Afrika", "Amerika"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Avrupa nima?",
-      "answers": ["Osiyo", "Yevropa", "Afrika", "Avstraliya"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "avukat nima?",
-      "answers": ["advokat", "aktyor", "janob", "baliq"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Avustralya nima?",
-      "answers": ["Avstraliya", "Germaniya", "Amerika", "Osiyo"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Avusturya nima?",
-      "answers": ["Avstriya", "Albaniya", "Afrika", "Yevropa"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "az nima?",
-      "answers": ["kam, oz", "katta", "oq", "buyuk"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "baba nima?",
-      "answers": ["dada (ota)", "chaqaloq", "janob", "xonim"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bahçe nima?",
-      "answers": ["bog‘", "baliq", "stakan", "hammom"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "balik nima?",
-      "answers": ["baliq", "daraxt", "mashina", "bank"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "balkon nima?",
-      "answers": ["balkon", "hammom", "idora", "masjid"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "banka nima?",
-      "answers": ["bank", "stakan", "bog‘", "kompyuter"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "banyo nima?",
-      "answers": ["hammom (dush)", "balkon", "oqshom", "bilet"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bardak nima?",
-      "answers": ["stakan", "bank", "bog‘", "chaqaloq"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bay nima?",
-      "answers": ["janob", "xonim", "dada", "buyuk"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bayan nima?",
-      "answers": ["xonim", "janob", "chaqaloq", "oq"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bayram nima?",
-      "answers": ["bayram", "oqshom", "avgust", "dekabr"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bebek nima?",
-      "answers": ["chaqaloq", "dada", "xonim", "baliq"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bey nima?",
-      "answers": ["janob", "xonim", "buyuk", "kam"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "beyaz nima?",
-      "answers": ["oq", "katta", "kam", "buyuk"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bilet nima?",
-      "answers": ["bilet, chipta", "stakan", "bank", "bog‘"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bilgisayar nima?",
-      "answers": ["kompyuter", "mashina", "bank", "bilet"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "bulasik nima?",
-      "answers": ["kir (idishlarga nisbatan)", "oq", "bog‘", "stakan"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "büro nima?",
-      "answers": ["idora, byuro", "masjid", "hammom", "balkon"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "büyük nima?",
-      "answers": ["katta, buyuk", "kam", "oq", "janob"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "cami nima?",
-      "answers": ["masjid, jome'", "idora", "bog‘", "bank"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "cetvel nima?",
-      "answers": ["lineyka, chizg‘ich", "stakan", "bilet", "kompyuter"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "cuma nima?",
-      "answers": ["juma", "shanba", "chorshanba", "dars"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "cumartesi nima?",
-      "answers": ["juma", "shanba", "bozor", "choy"],
-      "correct_answer": 1,
-      "time": 10
-    },
-    {
-      "question": "çalisma odasi nima?",
-      "answers": ["ish xonasi", "bolalar xonasi", "kirxona", "uy"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "camasir nima?",
-      "answers": ["kir (material, kiyimlarga nisbatan)", "sumka", "choy", "gul"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "camasir odasi nima?",
-      "answers": ["kirxona", "ish xonasi", "bolalar xonasi", "garaj"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "çanta nima?",
-      "answers": ["sumka", "daftar", "shkaf", "non"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "çarsanba nima?",
-      "answers": ["chorshanba", "juma", "shanba", "sentyabr"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "cargi nima?",
-      "answers": ["bozor", "choy", "dengiz", "dars"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "çay nima?",
-      "answers": ["choy", "non", "gul", "sumka"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "çiçek nima?",
-      "answers": ["gul", "atirgul", "yong‘oq", "olma"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Cin nima?",
-      "answers": ["Xitoy", "Fransiya", "Janubiy Amerika", "dengiz"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Cinli nima?",
-      "answers": ["xitoylik", "futbolchi", "shifokor", "ofitsiant"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "çocuk nima?",
-      "answers": ["bola", "erkak", "shifokor", "dars"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "cocuk odasi nima?",
-      "answers": ["bolalar xonasi", "kirxona", "ish xonasi", "garaj"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "çok nima?",
-      "answers": ["ko‘p, juda", "kam", "chiroyli", "kulrang"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "defter nima?",
-      "answers": ["daftar", "sumka", "non", "chashka"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "deniz nima?",
-      "answers": ["dengiz", "bozor", "uy", "to‘y"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ders nima?",
-      "answers": ["dars", "to‘y", "film", "choy"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "dogum günü nima?",
-      "answers": ["tug‘ilgan kun", "juma", "shanba", "oktyabr"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "doktor nima?",
-      "answers": ["shifokor", "ofitsiant", "futbolchi", "erkak"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "dolap nima?",
-      "answers": ["shkaf", "sumka", "daftar", "garaj"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "dügün nima?",
-      "answers": ["to‘y", "dars", "film", "bozor"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "eczane nima?",
-      "answers": ["dorixona, apteka", "shkaf", "choy", "non"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ekim nima?",
-      "answers": ["oktyabr", "sentyabr", "juma", "shanba"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ekmek nima?",
-      "answers": ["non", "choy", "gul", "olma"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "elbise nima?",
-      "answers": ["ko‘ylak (ayollarniki)", "shkaf", "sumka", "daftar"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "elma nima?",
-      "answers": ["olma", "yong‘oq", "gul", "non"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "erkek nima?",
-      "answers": ["erkak", "bola", "shifokor", "ofitsiant"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ev nima?",
-      "answers": ["uy", "garaj", "bozor", "dengiz"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "eylül nima?",
-      "answers": ["sentyabr", "oktyabr", "juma", "to‘y"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "fare nima?",
-      "answers": ["sichqon", "yong‘oq", "gul", "choy"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "findik nima?",
-      "answers": ["yong‘oq (funduk)", "olma", "non", "chashka"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "firça nima?",
-      "answers": ["cho‘tka", "daftar", "sumka", "shkaf"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "film nima?",
-      "answers": ["film, kino", "dars", "to‘y", "bozor"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "fincan nima?",
-      "answers": ["chashka", "non", "choy", "sumka"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Fransa nima?",
-      "answers": ["Fransiya", "Xitoy", "Janubiy Amerika", "dengiz"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "futbolcu nima?",
-      "answers": ["futbolchi", "shifokor", "ofitsiant", "erkak"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "garaj nima?",
-      "answers": ["garaj", "uy", "shkaf", "bozor"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "garson nima?",
-      "answers": ["ofitsiant", "futbolchi", "shifokor", "erkak"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "göz nima?",
-      "answers": ["ko‘z", "kulrang", "chiroyli", "hol"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "gri nima?",
-      "answers": ["kulrang", "chiroyli", "ko‘p", "kam"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "gül nima?",
-      "answers": ["atirgul", "gul", "yong‘oq", "olma"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Güney Amerika nima?",
-      "answers": ["Janubiy Amerika", "Fransiya", "Xitoy", "dengiz"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "güzel nima?",
-      "answers": ["chiroyli, go‘zal", "kulrang", "ko‘p", "kam"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "hâl nima?",
-      "answers": ["hol, ahvol", "gilam", "ko‘z", "chiroyli"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "hal nima?",
-      "answers": ["gilam", "hol", "uy", "garaj"],
-      "correct_answer": 0,
-      "time": 10
-
-
-},
-{
-
-      "question": "hanim nima?",
-      "answers": ["xonim", "ayol", "qiz", "hamshira"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "hastalk nima?",
-      "answers": ["kasallik", "orzu", "ish", "qalb"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "havuç nima?",
-      "answers": ["sabzi", "ismaloq", "olma", "yong‘oq"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "hayal nima?",
-      "answers": ["orzu, hayol", "kasallik", "qish", "bahor"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "haziran nima?",
-      "answers": ["iyun", "noyabr", "qish", "bahor"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "hemsire nima?",
-      "answers": ["hamshira", "xonim", "ayol", "qiz"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "his nima?",
-      "answers": ["hech", "ko‘p", "kam", "juda"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ispanak nima?",
-      "answers": ["ismaloq", "sabzi", "olma", "gul"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "izgara nima?",
-      "answers": ["panjara (barbekyu pishiriladigan metall)", "eshik", "o‘rindig", "qalam"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ideal nima?",
-      "answers": ["ideal", "orzu", "qalb", "ish"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ilkbahar nima?",
-      "answers": ["bahor", "qish", "iyun", "noyabr"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "inek nima?",
-      "answers": ["sigir", "mushuk", "kuchuk", "sichqon"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ingiliz nima?",
-      "answers": ["ingliz", "ispan", "eronlik", "koreys"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ingiltere nima?",
-      "answers": ["Angliya", "Italiya", "Ispaniya", "Yaponiya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "insan nima?",
-      "answers": ["inson, odam", "sigir", "mushuk", "kuchuk"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Iran nima?",
-      "answers": ["Eron", "Angliya", "Koreya", "Yaponiya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "iranh nima?",
-      "answers": ["eronlik", "ingliz", "ispan", "koreys"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ispanya nima?",
-      "answers": ["Ispaniya", "Italiya", "Angliya", "Eron"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "ispanyol nima?",
-      "answers": ["ispan", "ingliz", "eronlik", "koreys"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "is nima?",
-      "answers": ["ish", "qalb", "orzu", "kasallik"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "italya nima?",
-      "answers": ["Italiya", "Ispaniya", "Angliya", "Yaponiya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Japonya nima?",
-      "answers": ["Yaponiya", "Eron", "Koreya", "Angliya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "jeton nima?",
-      "answers": ["jeton", "jilet", "qalam", "kitob"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "jilet nima?",
-      "answers": ["jilet (ustara tig‘i)", "jeton", "qalam", "eshik"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kadin nima?",
-      "answers": ["ayol", "xonim", "qiz", "hamshira"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kafe nima?",
-      "answers": ["kafe", "eshik", "o‘rindig", "kitob"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kahve nima?",
-      "answers": ["qahva", "choy", "non", "gul"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kahverengi nima?",
-      "answers": ["malla", "qizil", "kulrang", "qora"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kalabalik nima?",
-      "answers": ["gavjum, tirband", "ko‘p", "kam", "ideal"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kalem nima?",
-      "answers": ["qalam", "kitob", "jilet", "jeton"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kalp nima?",
-      "answers": ["qalb, yurak", "ish", "orzu", "kasallik"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kapi nima?",
-      "answers": ["eshik", "kafe", "o‘rindig", "panjara"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kasim nima?",
-      "answers": ["noyabr", "iyun", "bahor", "qish"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kedi nima?",
-      "answers": ["mushuk", "sigir", "kuchuk", "sichqon"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "karmizi nima?",
-      "answers": ["qizil", "malla", "kulrang", "qora"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kis nima?",
-      "answers": ["qish", "bahor", "iyun", "noyabr"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kiz nima?",
-      "answers": ["qiz", "ayol", "xonim", "hamshira"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kira nima?",
-      "answers": ["ijara", "ish", "qalb", "orzu"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kisi nima?",
-      "answers": ["kishi", "sigir", "mushuk", "kuchuk"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kitap nima?",
-      "answers": ["kitob", "qalam", "jilet", "kafe"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "koltuk nima?",
-      "answers": ["o‘rindig", "eshik", "kafe", "panjara"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Kore nima?",
-      "answers": ["Koreya", "Yaponiya", "Eron", "Italiya"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "Koreli nima?",
-      "answers": ["koreys (koreyalik)", "ingliz", "ispan", "eronlik"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "köpek nima?",
-      "answers": ["kuchuk, it", "mushuk", "sigir", "sichqon"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "köy nima?",
-      "answers": ["qishloq", "kafe", "eshik", "o‘rindig"],
-      "correct_answer": 0,
-      "time": 10
-    },
-{
-
-      "question": "kulaklik nima?",
-      "answers": ["quloqchin (naushnik)", "qush", "quti", "zina"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "kus nima?",
-      "answers": ["qush", "o‘rdak", "quloqchin", "limon"],
+      "question": "acil nima?",
+      "answers": ["shoshilinch, tez", "sekin", "oddiy", "sokin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kutu nima?",
-      "answers": ["quti (korobka)", "paket", "qaychi", "xona"],
+      "question": "adım nima?",
+      "answers": ["qadam", "yo‘l", "tezlik", "sakrash"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Kuzey Amerika nima?",
-      "answers": ["Shimoliy Amerika", "Nigeriya", "Pokiston", "Misr"],
+      "question": "araç nima?",
+      "answers": ["transport vositasi, vosita", "uy", "qurilma", "quvur"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kütüphane nima?",
-      "answers": ["kutubxona", "oshxona", "mehmonxona", "magazin"],
+      "question": "arıza nima?",
+      "answers": ["xato, (buzilish holati)", "to‘g‘rilik", "ishonch", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "lacivert nima?",
-      "answers": ["lojuvard rang (бирюзовый)", "moviy", "siyohrang", "qizil"],
+      "question": "bedel nima?",
+      "answers": ["badal, tölo‘v", "qarz", "sovg‘a", "xizmat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "lale nima?",
-      "answers": ["lola", "anor", "limon", "qush"],
+      "question": "bilek nima?",
+      "answers": ["bilak", "qo‘l", "bosh", "oyoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "limon nima?",
-      "answers": ["limon", "lola", "anor", "qaychi"],
+      "question": "borç nima?",
+      "answers": ["qarz", "tölo‘v", "foyda", "sovg‘a"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "lokanta nima?",
-      "answers": ["restoran", "magazin", "kutubxona", "mehmonxona"],
+      "question": "boru nima?",
+      "answers": ["quvur", "arqon", "yo‘l", "suv"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "lütfen nima?",
-      "answers": ["iltimos, marhamat", "band", "misol", "raqam"],
+      "question": "büyüklük nima?",
+      "answers": ["kattalik", "kichiklik", "uzunlik", "qisqalik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "magaza nima?",
-      "answers": ["magazin", "restoran", "oshxona", "zina"],
+      "question": "büyüleyici nima?",
+      "answers": ["kattalashtiradigan", "kichraytiradigan", "oddiy", "sekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "makas nima?",
-      "answers": ["qaychi", "quti", "paket", "quloqchin"],
+      "question": "civar nima?",
+      "answers": ["atrof (çevre-atrof)", "markaz", "ichki", "uzoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Malezya nima?",
-      "answers": ["Malayziya", "Nigeriya", "Pokiston", "Misr"],
+      "question": "çöp nima?",
+      "answers": ["axlat", "suv", "ovqat", "qadoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Malezyah nima?",
-      "answers": ["malayziyalik", "misrlik", "pokistonlik", "muhandis"],
+      "question": "dahil nima?",
+      "answers": ["shu jumladan", "alohida", "tashqari", "maxsus"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mart nima?",
-      "answers": ["mart (oy)", "aprel", "may", "yanvar"],
+      "question": "davranış nima?",
+      "answers": ["xulq-atvor", "so‘z", "harakat", "fikr"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "masa nima?",
-      "answers": ["stol", "zina", "quti", "o‘rindig"],
+      "question": "deneyim nima?",
+      "answers": ["tajriba", "bilim", "xato", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mavi nima?",
-      "answers": ["moviy (rang)", "siyohrang", "lojuvard", "qizil"],
+      "question": "depozito nima?",
+      "answers": ["depozit (komissiyoniskiy)", "qarz", "tölo‘v", "soliq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mayis nima?",
-      "answers": ["may (oy)", "mart", "aprel", "yanvar"],
+      "question": "doğalgaz nima?",
+      "answers": ["tabiiy gaz (oqma gaz)", "suv", "elektr", "yoqilg‘i"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "merdiven nima?",
-      "answers": ["zina", "stol", "qaychi", "xona"],
+      "question": "döşeme nima?",
+      "answers": ["pol", "devor", "tavan", "eshik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mesgul nima?",
-      "answers": ["band", "iltimos", "misol", "raqam"],
+      "question": "durum nima?",
+      "answers": ["vaziyat, holat", "joy", "vaqt", "narx"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "metro nima?",
-      "answers": ["metro", "avtobus", "restoran", "magazin"],
+      "question": "eğitim nima?",
+      "answers": ["ta’lim", "ish", "o‘yin", "sayohat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Misir nima?",
-      "answers": ["Misr", "Malayziya", "Nigeriya", "Pokiston"],
+      "question": "emlak nima?",
+      "answers": ["köchmas mulk", "pul", "transport", "uy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Misirh nima?",
-      "answers": ["misrlik", "malayziyalik", "pokistonlik", "o‘quvchi"],
+      "question": "endişeli nima?",
+      "answers": ["xavotirli, tashvishli", "xursand", "tinch", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "millet nima?",
-      "answers": ["millat", "misol", "raqam", "band"],
+      "question": "etki nima?",
+      "answers": ["ta’sir", "harakat", "so‘z", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "misal nima?",
-      "answers": ["misol", "millat", "raqam", "zina"],
+      "question": "evlilik nima?",
+      "answers": ["oila qurish, nikoh", "yoshlik", "sayohat", "ish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mor nima?",
-      "answers": ["siyohrang", "moviy", "lojuvard", "qizil"],
+      "question": "fatura nima?",
+      "answers": ["hisob-faktura", "xat", "qarz", "sovg‘a"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mutfak nima?",
-      "answers": ["oshxona", "kutubxona", "restoran", "xona"],
+      "question": "fiyat nima?",
+      "answers": ["narx", "qiymat", "sovg‘a", "xizmat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mühendis nima?",
-      "answers": ["muhandis (injener)", "o‘qituvchi", "o‘quvchi", "misrlik"],
+      "question": "fonksiyon nima?",
+      "answers": ["funksiya", "xato", "ish", "harakat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "nar nima?",
-      "answers": ["anor", "limon", "lola", "qush"],
+      "question": "garip nima?",
+      "answers": ["g‘alati", "oddiy", "tushunarli", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Nijerya nima?",
-      "answers": ["Nigeriya", "Malayziya", "Misr", "Pokiston"],
+      "question": "günlük nima?",
+      "answers": ["kunlik", "haftalik", "oylik", "yillik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "nisan nima?",
-      "answers": ["aprel (oy)", "mart", "may", "yanvar"],
+      "question": "güvenlik nima?",
+      "answers": ["ishonchli", "xavfli", "oddiy", "tekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "numara nima?",
-      "answers": ["raqam (nomer)", "misol", "millat", "band"],
+      "question": "halat nima?",
+      "answers": ["arqon", "quvur", "suv", "yo‘l"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ocak nima?",
-      "answers": ["yanvar (oy)", "aprel", "may", "mart"],
+      "question": "ham nima?",
+      "answers": ["xom", "pishgan", "mazali", "suvli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "oda nima?",
-      "answers": ["xona", "oshxona", "kutubxona", "restoran"],
+      "question": "ısıtma nima?",
+      "answers": ["isitish", "sovutish", "yuvish", "tozalash"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "orman nima?",
-      "answers": ["o‘rmon", "istirohat bog‘i", "qush", "zina"],
+      "question": "ıslak nima?",
+      "answers": ["ho‘l", "quruq", "issiq", "sovuq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "otel nima?",
-      "answers": ["mehmonxona", "restoran", "magazin", "kutubxona"],
+      "question": "içerik nima?",
+      "answers": ["tarkibi", "narxi", "shakli", "rangi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "otobüs nima?",
-      "answers": ["avtobus", "metro", "quti", "qaychi"],
+      "question": "ihtiyaç nima?",
+      "answers": ["ehtiyoj", "xohish", "sovg‘a", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ögrenci nima?",
-      "answers": ["o‘quvchi", "o‘qituvchi", "muhandis", "misrlik"],
+      "question": "ilan nima?",
+      "answers": ["e’lon", "xat", "so‘z", "taklif"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ögretmen nima?",
-      "answers": ["o‘qituvchi", "o‘quvchi", "muhandis", "malayziyalik"],
+      "question": "imdat nima?",
+      "answers": ["yordam", "xavf", "sovg‘a", "ish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ördek nima?",
-      "answers": ["o‘rdak", "qush", "quloqchin", "quti"],
+      "question": "iş bölümü nima?",
+      "answers": ["ish taqsimoti", "ish boshlash", "ish tugatish", "ish joyi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "paket nima?",
-      "answers": ["paket", "quti", "qaychi", "zina"],
+      "question": "işlem nima?",
+      "answers": ["jarayon", "xato", "harakat", "natija"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Pakistan nima?",
-      "answers": ["Pokiston", "Nigeriya", "Misr", "Malayziya"],
+      "question": "jandarma nima?",
+      "answers": ["ichki ishlar jandarmi", "shifokor", "o‘qituvchi", "sotuvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Pakistanli nima?",
-      "answers": ["pokistonlik", "misrlik", "malayziyalik", "muhandis"],
+      "question": "kaban nima?",
+      "answers": ["palto", "ko‘ylak", "shim", "ayiqcha"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "park nima?",
-      "answers": ["istirohat bog‘i (park)", "o‘rmon", "qush", "xona"],
+      "question": "kanat nima?",
+      "answers": ["qanot, dalil", "oyoq", "bosh", "qo‘l"],
       "correct_answer": 0,
       "time": 10
-    },{
-
-      "question": "para nima?",
-      "answers": ["pul", "palto", "benzin", "soat"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "paradösü nima?",
-      "answers": ["palto", "pul", "deraza", "stul"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "pazartesi nima?",
-      "answers": ["dushanba", "seshanba", "payshanba", "tong"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "pembe nima?",
-      "answers": ["pushti (rang)", "sariq", "qora", "moviy"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "pencere nima?",
-      "answers": ["deraza", "stul", "palto", "soat"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "persembe nima?",
-      "answers": ["payshanba", "dushanba", "seshanba", "fevral"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "petrol nima?",
-      "answers": ["benzin", "pul", "palto", "radio"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "piyano nima?",
-      "answers": ["piyanino", "radio", "telefon", "soat"],
-      "correct_answer": 0,
-      "time": 10
     },
     {
-      "question": "polis nima?",
-      "answers": ["militsiya", "professor", "pochtachi", "qo'shiqchi"],
+      "question": "kiralık nima?",
+      "answers": ["ijaraga beriladigan", "sotiladigan", "tekin", "qarz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "portakal nima?",
-      "answers": ["apelsin", "anor", "limon", "soch"],
+      "question": "kombi nima?",
+      "answers": ["kombi (uy va suv isitish moslamasi)", "suv isitgich", "gaz", "elektr"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "postaci nima?",
-      "answers": ["pochtachi", "militsiya", "professor", "qo'shiqchi"],
+      "question": "konum nima?",
+      "answers": ["joylashuv", "narx", "vaqt", "holat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "profesör nima?",
-      "answers": ["professor", "pochtachi", "militsiya", "radio"],
+      "question": "koza nima?",
+      "answers": ["pilla", "qanot", "arqon", "quvur"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "radyo nima?",
-      "answers": ["radio", "piyanino", "telefon", "rasm"],
+      "question": "lavabo nima?",
+      "answers": ["qo‘l yuviladigan unitaz (xojatxona)", "pol", "devor", "tavan"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "resim nima?",
-      "answers": ["rasm", "roman", "savol", "lug‘at"],
+      "question": "lüks nima?",
+      "answers": ["hashamat, luks", "oddiy", "arzon", "qimmat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "rol nima?",
-      "answers": ["rol", "rasm", "roman", "sayohat"],
+      "question": "manzara nima?",
+      "answers": ["ko‘rinish, manzara", "xato", "suv", "pol"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "roman nima?",
-      "answers": ["roman", "rasm", "savol", "lug‘at"],
+      "question": "masrafsız nima?",
+      "answers": ["xarajatsiz, bepul", "qimmat", "qarz", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Rus nima?",
-      "answers": ["rus", "suriyalik", "somali", "tovuq"],
+      "question": "mevki nima?",
+      "answers": ["mavqe, pozitsiya", "joy", "narx", "vaqt"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Rusya nima?",
-      "answers": ["Rossiya", "Suriya", "Somali", "benzin"],
+      "question": "muhit nima?",
+      "answers": ["muhit", "xato", "ish", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "saat nima?",
-      "answers": ["soat", "radio", "piyanino", "telefon"],
+      "question": "müstakil nima?",
+      "answers": ["xususiy", "umumiy", "ijaraga", "tekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sabah nima?",
-      "answers": ["tong", "kuz", "fevral", "payshanba"],
+      "question": "nezih nima?",
+      "answers": ["yaxshi", "yomon", "oddiy", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "saç nima?",
-      "answers": ["soch", "apelsin", "limon", "anor"],
+      "question": "ödeme nima?",
+      "answers": ["tölo‘v", "qarz", "sovg‘a", "xizmat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sal nima?",
-      "answers": ["seshanba", "dushanba", "payshanba", "tong"],
+      "question": "ömür nima?",
+      "answers": ["umr", "yoshlik", "vaqt", "kun"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "salon nima?",
-      "answers": ["mehmonxona, zal", "deraza", "stul", "palto"],
+      "question": "özellik nima?",
+      "answers": ["xususiyat", "narx", "shakl", "rang"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sandalye nima?",
-      "answers": ["stul", "deraza", "palto", "soat"],
+      "question": "pazarlık nima?",
+      "answers": ["savdolashish", "sotish", "olish", "berish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sar1 nima?",
-      "answers": ["sariq", "pushti", "qora", "moviy"],
+      "question": "pil nima?",
+      "answers": ["batareya", "suv", "elektr", "gaz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sembol nima?",
-      "answers": ["simvol", "savol", "muammo", "lug‘at"],
+      "question": "sahip nima?",
+      "answers": ["ega, sohib", "qarz", "xodim", "do‘st"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "seyahat nima?",
-      "answers": ["sayohat", "rol", "rasm", "roman"],
+      "question": "satır nima?",
+      "answers": ["chiziq", "nuqta", "doira", "kvadrat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sira nima?",
-      "answers": ["navbat, parta", "soat", "stul", "deraza"],
+      "question": "satış nima?",
+      "answers": ["sotish", "olish", "berish", "savdo"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "silgi nima?",
-      "answers": ["o‘chirg‘ich", "taxta", "qalam", "kitob"],
+      "question": "sızıntı nima?",
+      "answers": ["oqish, sizib chiqish", "to‘xtash", "yopilish", "qurish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "siyah nima?",
-      "answers": ["qora", "sariq", "pushti", "moviy"],
+      "question": "sigorta nima?",
+      "answers": ["sug‘urta, (elektr avtomati)", "xavf", "tölo‘v", "qarz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sokak nima?",
-      "answers": ["ko‘cha", "mehmonxona", "stul", "radio"],
+      "question": "sözleşme nima?",
+      "answers": ["shartnoma", "xat", "e’lon", "taklif"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Somali nima?",
-      "answers": ["Somali", "Rossiya", "Suriya", "tovuq"],
+      "question": "şofben nima?",
+      "answers": ["suv isitgich", "kombi", "gaz", "elektr"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sonbahar nima?",
-      "answers": ["kuz", "tong", "fevral", "dushanba"],
+      "question": "tarife nima?",
+      "answers": ["retsept, toifa", "narx", "xizmat", "sovg‘a"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "soru nima?",
-      "answers": ["savol", "simvol", "muammo", "lug‘at"],
+      "question": "taşınma nima?",
+      "answers": ["ko‘chish", "qolish", "yurish", "sakrash"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sorun nima?",
-      "answers": ["muammo", "savol", "simvol", "sayohat"],
+      "question": "temel nima?",
+      "answers": ["asos", "ustun", "devor", "pol"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sözlük nima?",
-      "answers": ["lug‘at", "roman", "rasm", "savol"],
+      "question": "tesisatçı nima?",
+      "answers": ["santexnik", "ustoz", "shifokor", "sotuvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Suriye nima?",
-      "answers": ["Suriya", "Rossiya", "Somali", "benzin"],
+      "question": "tuhaf nima?",
+      "answers": ["g‘alati", "oddiy", "tushunarli", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sarkici nima?",
-      "answers": ["qo‘shiqchi, ashulachi", "pochtachi", "militsiya", "professor"],
+      "question": "tüketim nima?",
+      "answers": ["iste’mol", "sotish", "olish", "berish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "semsiye nima?",
-      "answers": ["soyabon", "palto", "stul", "deraza"],
+      "question": "ulaşım nima?",
+      "answers": ["transport, ulashish yo‘li", "joy", "vaqt", "narx"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sise nima?",
-      "answers": ["shisha", "soat", "radio", "piyanino"],
+      "question": "uygun nima?",
+      "answers": ["uyg‘un, mos", "noto‘g‘ri", "xato", "qiyin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "subat nima?",
-      "answers": ["fevral (oy)", "dushanba", "payshanba", "kuz"],
+      "question": "uyum nima?",
+      "answers": ["moslik, uyum", "farq", "xato", "qarshilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tahta nima?",
-      "answers": ["taxta (doska)", "o‘chirg‘ich", "qalam", "kitob"],
+      "question": "vali nima?",
+      "answers": ["hokim", "shifokor", "o‘qituvchi", "xodim"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tavuk nima?",
-      "answers": ["tovuq", "rus", "somali", "suriyalik"],
+      "question": "vana nima?",
+      "answers": ["vena, klapan", "quvur", "suv", "arqon"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "telefon nima?",
-      "answers": ["telefon", "radio", "piyanino", "rasm"],
+      "question": "vergi nima?",
+      "answers": ["soliq", "tölo‘v", "qarz", "sovg‘a"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "temiz nima?",
-      "answers": ["toza", "qora", "sariq", "pushti"],
-      "correct_answer": 0,
-      "time": 10
-    },
-{
-
-      "question": "top nima?",
-      "answers": ["koptok (to‘p)", "uzum", "vagon", "yulduz"],
+      "question": "yakınlık nima?",
+      "answers": ["yaqinlik", "uzoqlik", "farq", "moslik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "turist nima?",
-      "answers": ["turist, sayyoh", "turk", "yunon", "chet ellik"],
+      "question": "yapışık nima?",
+      "answers": ["yopishgan", "alohida", "uzoq", "quruq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "turuncu nima?",
-      "answers": ["sabzirang", "yashil", "qora", "sariq"],
+      "question": "yuva nima?",
+      "answers": ["uya, in", "uy", "qadoq", "pol"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Türk nima?",
-      "answers": ["turk", "yunon", "rus", "chet ellik"],
+      "question": "zam nima?",
+      "answers": ["narx oshishi, oylik oshishi", "narx pasayishi", "tölo‘v", "qarz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Türkiye nima?",
-      "answers": ["Turkiya", "Yunoniston", "Rossiya", "Somali"],
+      "question": "acele etmek nima?",
+      "answers": ["shoshilmoq", "sekinlashmoq", "to‘xtamoq", "yurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "uçak nima?",
-      "answers": ["samolyot", "vagon", "varrak", "koptok"],
+      "question": "akıtmak nima?",
+      "answers": ["drenaj, oqizmoq", "to‘xtatmoq", "yopmoq", "quritmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "uçurtma nima?",
-      "answers": ["varrak", "samolyot", "vagon", "uzuk"],
+      "question": "atıştırmak nima?",
+      "answers": ["aperatif ovqatlanish, tezlikda yengil yemoq", "to‘yib ovqatlanmoq", "ichmoq", "pishirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "üzüm nima?",
-      "answers": ["uzum", "zaytun", "koptok", "yulduz"],
+      "question": "ayırmak nima?",
+      "answers": ["ayirmoq", "qo‘shmoq", "aralashtirmoq", "yig‘moq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "vagon nima?",
-      "answers": ["vagon", "samolyot", "varrak", "yotoqxona"],
+      "question": "basmak nima?",
+      "answers": ["bosmoq, ayb ustida ushlamoq", "yurmoq", "sakramoq", "otmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yabanci nima?",
-      "answers": ["chet ellik, begona", "turist", "turk", "yunon"],
+      "question": "benzemek nima?",
+      "answers": ["o‘xshamoq", "farqlanmoq", "ayirmoq", "qaramoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yatak odasi nima?",
-      "answers": ["yotoqxona", "oshxona", "mehmonxona", "xona"],
+      "question": "boşaltmak nima?",
+      "answers": ["bo‘shatmoq", "to‘ldirmoq", "yopmoq", "ochmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yaz nima?",
-      "answers": ["yoz", "kuz", "qish", "bahor"],
+      "question": "bozulmak nima?",
+      "answers": ["aynimoq, achimoq, buzilmoq", "tuzatmoq", "yaxshilanmoq", "tozalamoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yemek nima?",
-      "answers": ["ovqat", "uzum", "zaytun", "sabzirang"],
+      "question": "burkmak nima?",
+      "answers": ["paylarning shikastlanishi, lat yemoq", "tuzatmoq", "yuvmoq", "kesmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yeni nima?",
-      "answers": ["yangi", "eski", "toza", "qora"],
+      "question": "değerlendirmek nima?",
+      "answers": ["qadrlantirmoq, baholash", "rad etmoq", "e’tiborsiz qoldirmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yesil nima?",
-      "answers": ["yashil", "sabzirang", "sariq", "qora"],
+      "question": "dikkat çekmek nima?",
+      "answers": ["boshqalarni diqqatini jalb qilish", "yashirmoq", "e’tiborsiz qoldirmoq", "so‘ramoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yil nima?",
-      "answers": ["yil", "oy", "hafta", "kun"],
+      "question": "doldurmak nima?",
+      "answers": ["to‘ldirmoq", "bo‘shatmoq", "yopmoq", "ochmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yildiz nima?",
-      "answers": ["yulduz", "uzum", "zaytun", "koptok"],
+      "question": "eğmek nima?",
+      "answers": ["egmoq, bo‘ysundirmoq", "ko‘tarmoq", "yurmoq", "sakramoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Yunan nima?",
-      "answers": ["yunon", "turk", "rus", "chet ellik"],
+      "question": "fışkırmak nima?",
+      "answers": ["otilib chiqmoq, fishqirib chiqmoq", "to‘xtamoq", "yopilmoq", "qurimoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Yunanistan nima?",
-      "answers": ["Yunoniston", "Turkiya", "Rossiya", "Somali"],
+      "question": "harcamak nima?",
+      "answers": ["xarjlashmoq, sarflamoq", "tejammoq", "yig‘moq", "bermoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yüzük nima?",
-      "answers": ["uzuk", "varrak", "samolyot", "vagon"],
+      "question": "ısınmak nima?",
+      "answers": ["isinmoq", "sovimoq", "qurimoq", "ho‘llanmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "zeytin nima?",
-      "answers": ["zaytun", "uzum", "koptok", "yulduz"],
+      "question": "ilerletmek nima?",
+      "answers": ["oldinga olib chiqmoq, ilgari qilmoq", "orqaga qaytarmoq", "to‘xtatmoq", "sekinlashtirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "zürafa nima?",
-      "answers": ["jirafa", "kuchuk", "mushuk", "tovuq"],
+      "question": "karşılaşmak nima?",
+      "answers": ["uchrashib qolmoq, qarshilashmoq", "ayrilmoq", "yashirmoq", "qochmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "açmak nima?",
-      "answers": ["ochmoq", "yopmoq", "qilmoq", "kelmoq"],
+      "question": "kopmak nima?",
+      "answers": ["uzulmoq", "birikmoq", "yopilmoq", "ochilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bakmak nima?",
-      "answers": ["boqmoq, qaramoq", "tinglamoq", "yozmoq", "ochmoq"],
+      "question": "kurtulmak nima?",
+      "answers": ["qutulmoq, ozod bo‘lmoq", "qolmoq", "bog‘lanmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "cevap vermek nima?",
-      "answers": ["javob bermoq", "tinglamoq", "ko‘rishmoq", "yopmoq"],
+      "question": "önermek nima?",
+      "answers": ["taklif qilmoq, tavsiya qilmoq", "rad etmoq", "xato qilmoq", "so‘ramoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dinlemek nima?",
-      "answers": ["tinglamoq", "yozmoq", "ochmoq", "qaramoq"],
+      "question": "patlamak nima?",
+      "answers": ["portlamoq", "yopilmoq", "to‘xtamoq", "qurimoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "etmek nima?",
-      "answers": ["etmoq, qilmoq", "kelmoq", "ochmoq", "yopmoq"],
+      "question": "sığmak nima?",
+      "answers": ["sig‘moq", "chiqmoq", "kattalashmoq", "qisqarmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "gelmek nima?",
-      "answers": ["kelmoq", "yozmoq", "tinglamoq", "qilmoq"],
+      "question": "sıkışmak nima?",
+      "answers": ["tiqilib qolmoq, siqilmoq", "bo‘shashmoq", "kengaymoq", "yurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "görüsmek nima?",
-      "answers": ["ko‘rishmoq", "javob bermoq", "ochmoq", "yopmoq"],
+      "question": "sızdırmak nima?",
+      "answers": ["sizdirmoq", "to‘xtatmoq", "yopmoq", "quritmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kapatmak nima?",
-      "answers": ["yopmoq", "ochmoq", "qilmoq", "kelmoq"],
+      "question": "söndürmek nima?",
+      "answers": ["o‘chirmoq, so‘ndirmoq", "yoqmoq", "isinmoq", "yuvmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "okumak nima?",
-      "answers": ["o‘qimoq", "yozmoq", "tinglamoq", "qaramoq"],
+      "question": "takip etmek nima?",
+      "answers": ["taqib qilmoq, kuzatmoq", "qochmoq", "yashirmoq", "to‘xtamoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "olmak nima?",
-      "answers": ["bo‘lmoq", "etmoq", "kelmoq", "yopmoq"],
+      "question": "tartışmak nima?",
+      "answers": ["tortishmoq", "kelishmoq", "tinchlanmoq", "yordam bermoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tamamlamak nima?",
-      "answers": ["tamomlamoq, tugatmoq", "takrorlamoq", "yozmoq", "ochmoq"],
+      "question": "telaşlanmak nima?",
+      "answers": ["xavotir olmoq, tashvishlanmoq", "tinchlanmoq", "kulmoq", "dam olmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tekrar etmek nima?",
-      "answers": ["takrorlamoq", "tamomlamoq", "qilmoq", "kelmoq"],
+      "question": "tercih etmek nima?",
+      "answers": ["tanlamoq, ma’qul ko‘rmoq", "rad etmoq", "e’tiborsiz qoldirmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yazmak nima?",
-      "answers": ["yozmoq", "o‘qimoq", "tinglamoq", "qaramoq"],
+      "question": "teslim etmek nima?",
+      "answers": ["taslim qilmoq, topshirmoq", "olmoq", "rad etmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Affed ersiniz nima?",
-      "answers": ["kechirasiz", "xayr", "xayrli tong", "ko‘rishamiz"],
+      "question": "tıkanmak nima?",
+      "answers": ["tiqilmoq, tiqilib qolmoq", "bo‘shashmoq", "kengaymoq", "oqmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Afiyet olsun nima?",
-      "answers": ["yoqimli ishtaha", "omad yor bo‘lsin", "ko‘p yasha", "xayr"],
+      "question": "uğraşmak nima?",
+      "answers": ["o‘ralashmoq, ovora bo‘lmoq", "dam olmoq", "to‘xtamoq", "yurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Bol ganslar nima?",
-      "answers": ["omad yor bo‘lsin", "yoqimli ishtaha", "xayrli tong", "kechirasiz"],
+      "question": "yadırgamak nima?",
+      "answers": ["g‘alati bo‘lib qolmoq, g‘alati deb bilmoq", "qabul qilmoq", "tushunmoq", "yaxshi ko‘rmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Çok yaça nima?",
-      "answers": ["ko‘p yasha", "omad yor bo‘lsin", "xayr", "kechirasiz"],
+      "question": "yansıtmak nima?",
+      "answers": ["aks ettirmoq", "yashirmoq", "o‘chirmoq", "qurimoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Geçmis olsun nima?",
-      "answers": ["ortda qolgani rost bo‘lsin", "xayrli tong", "ko‘rishamiz", "xush ko‘rdik"],
+      "question": "yardımcı olmak nima?",
+      "answers": ["yordam bermoq", "xato qilmoq", "rad etmoq", "qarshilashmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Görüsürüz / Görüsmek üzere nima?",
-      "answers": ["ko‘rishamiz, ko‘rishguncha", "xayr", "kechirasiz", "xayrli tong"],
+      "question": "yığmak nima?",
+      "answers": ["toplamoq, yig‘moq", "tarqatmoq", "sotmoq", "bermoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Güle güle nima?",
-      "answers": ["xayr", "kechirasiz", "xayrli tong", "ko‘rishamiz"],
+      "question": "zenginleşmek nima?",
+      "answers": ["boyimoq", "qashshoqlashmoq", "kamaymoq", "yuvmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Günaydin nima?",
-      "answers": ["xayrli tong", "xayr", "ko‘rishamiz", "yoqimli ishtaha"],
+      "question": "başının etini yemek nima?",
+      "answers": ["ming‘irlab boshini og‘ritib yubormoq", "yordam bermoq", "tinchlantirmoq", "kulmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "Hos bulduk nima?",
-      "answers": ["xush ko‘rdik", "xayrli tong", "kechirasiz", "xayr"],
+      "question": "kalbini fethetmek nima?",
+      "answers": ["yuragini zabt qilmoq", "xafa qilmoq", "rad etmoq", "uzoqlashmoq"],
       "correct_answer": 0,
       "time": 10
     }
