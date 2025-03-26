@@ -2,1088 +2,1034 @@
   "name": "Unit 2",
   "questions": [
     {
-      "question": "aç nima?",
-      "answers": ["och", "to‘la", "issiq", "sovuq"],
+      "question": "abur cubur nima?",
+      "answers": ["mayda-chuyda", "to‘yimli taom", "suv", "ichimlik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "açik nima?",
-      "answers": ["ochiq", "yopiq", "tor", "keng"],
+      "question": "esnek nima?",
+      "answers": ["moslashuvchan, ergiluvchan", "qattiq", "o‘zgarmas", "sekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "adres nima?",
-      "answers": ["manzil (adres)", "joy", "ko‘cha", "bino"],
+      "question": "metabolizma nima?",
+      "answers": ["metabolizm", "harakat", "nafas", "ovqat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "aksam nima?",
-      "answers": ["kechqurun, oqshom", "ertalab", "kunduz", "tong"],
+      "question": "verimsiz nima?",
+      "answers": ["samarasiz", "samarali", "tez", "foydali"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "alisveris nima?",
-      "answers": ["savdo-sotiq", "sayohat", "ta’til", "musobaga"],
+      "question": "izin vermek nima?",
+      "answers": ["ruxsat bermoq", "man qilmoq", "rad etmoq", "kechiktirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "alisveris merkezi nima?",
-      "answers": ["savdo-sotiq markazi", "market", "do‘kon", "bino"],
+      "question": "amaç nima?",
+      "answers": ["maqsad", "xato", "yordam", "vaqt"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "alt nima?",
-      "answers": ["ost, pastroq", "ust", "tepa", "joy"],
+      "question": "etkileyici nima?",
+      "answers": ["ta’sir o‘tkazadigan, ta’sir qiluvchi", "oddiy", "sekin", "qiziqsiz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "anahtar nima?",
-      "answers": ["kalit", "qaychi", "lamp", "eshik"],
+      "question": "nakış nima?",
+      "answers": ["naqsh", "rang", "shakl", "chiziq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "arti nima?",
-      "answers": ["qo‘shuv +", "ayiruv -", "ko‘paytiruv *", "bo‘lish /"],
+      "question": "yağ nima?",
+      "answers": ["yog‘", "suv", "gaz", "tuz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "asci nima?",
-      "answers": ["oshpaz", "qassob", "sotuvchi", "ta’mirlovchi"],
+      "question": "kaçınmak nima?",
+      "answers": ["qochmoq", "yaqinlashmoq", "qidirmoq", "topmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "avukat nima?",
-      "answers": ["advokat", "doktor", "o‘qituvchi", "oshpaz"],
+      "question": "ambalaj nima?",
+      "answers": ["qadoq", "quti", "sumka", "qog‘oz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ay nima?",
-      "answers": ["oy", "yil", "kun", "hafta"],
+      "question": "etkin nima?",
+      "answers": ["samarali, ta’sir qiladigan", "samarasiz", "oddiy", "sekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "banka nima?",
-      "answers": ["bank", "do‘kon", "market", "bino"],
+      "question": "organizasyon nima?",
+      "answers": ["tashkilot, tashkil qilingan", "tartibsizlik", "xato", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "basarili nima?",
-      "answers": ["muvaffaqiyatli", "jasur", "mehnatkash", "tartibli"],
+      "question": "yaradılış nima?",
+      "answers": ["yaratilish", "buzilish", "o‘zgarish", "tugatish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bekâr nima?",
-      "answers": ["turmush qurmagan, bo‘ydoq yoki ajrashgan", "oilali", "yosh", "qari"],
+      "question": "kanıtlamak nima?",
+      "answers": ["isbotlash, dalil keltirmoq", "rad etmoq", "yashirmoq", "so‘ramoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bilet nima?",
-      "answers": ["bilet, chipta", "kalit", "ro‘yxat", "gazeta"],
+      "question": "amiral nima?",
+      "answers": ["admiral", "soldat", "shifokor", "o‘qituvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bina nima?",
-      "answers": ["bino", "ko‘cha", "joy", "manzil"],
+      "question": "farklılık nima?",
+      "answers": ["farqlilik, farq", "o‘xshashlik", "moslik", "bir xillik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "birçok nima?",
-      "answers": ["bir qancha", "ko‘p", "kam", "hech"],
+      "question": "ortam nima?",
+      "answers": ["muhit", "joy", "vaqt", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bos nima?",
-      "answers": ["bo‘sh", "to‘la", "tor", "keng"],
+      "question": "yaşayış nima?",
+      "answers": ["yashash holati", "sayohat", "ish", "o‘yin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bozuk nima?",
-      "answers": ["buzuq", "to‘g‘ri", "tartibli", "toza"],
+      "question": "kaptırmak nima?",
+      "answers": ["tutilmoq", "qochmoq", "topmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bölüm nima?",
-      "answers": ["bo‘lim", "son", "shakl", "ro‘yxat"],
+      "question": "arzu nima?",
+      "answers": ["orzu", "xavf", "xato", "qarz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bölü nima?",
-      "answers": ["bo‘lish", "qo‘shuv", "ayiruv", "ko‘paytiruv"],
+      "question": "fırsat nima?",
+      "answers": ["fursat, shans", "qiyinchilik", "xavf", "kechikish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bugün nima?",
-      "answers": ["bugun", "ertaga", "kecha", "hozir"],
+      "question": "ödül nima?",
+      "answers": ["mukofot, sovrin", "jarima", "qarz", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "burada nima?",
-      "answers": ["bu yerda", "u yerda", "qayerda", "joy"],
+      "question": "yenik nima?",
+      "answers": ["mag‘lub", "g‘olib", "birinchi", "oxirgi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "bütün nima?",
-      "answers": ["butun", "bo‘lim", "qism", "yarim"],
+      "question": "kırılmak nima?",
+      "answers": ["sinmoq", "tuzalmoq", "yopilmoq", "ochilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "büyük nima?",
-      "answers": ["katta", "kichik", "uzun", "qisqa"],
+      "question": "asgari nima?",
+      "answers": ["eng kam", "eng ko‘p", "o‘rtacha", "tekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "cesur nima?",
-      "answers": ["jasur", "qorqinchak", "mehnatkash", "tartibli"],
+      "question": "firma nima?",
+      "answers": ["firma", "uy", "do‘kon", "maktab"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ciddi nima?",
-      "answers": ["jiddiy", "kulguli", "xushchaqchaq", "sokin"],
+      "question": "öğe nima?",
+      "answers": ["element", "qism", "butun", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "çaliskan nima?",
-      "answers": ["mehnatkash", "yalqov", "tartibsiz", "xushmuomala"],
+      "question": "yenilikçi nima?",
+      "answers": ["yangilikchi", "eskicha", "oddiy", "qadimiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "çarpi nima?",
-      "answers": ["ko‘paytiruv *", "bo‘lish /", "qo‘shuv +", "ayiruv -"],
+      "question": "kurmak nima?",
+      "answers": ["qurmoq, tashkil qilmoq", "buzmoq", "tugatmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "cirkin nima?",
-      "answers": ["xunuk", "chiroyli", "toza", "kir"],
+      "question": "aşağılama nima?",
+      "answers": ["pastga urmoq, obro‘sizlantirmoq", "ulug‘lashmoq", "hurmat qilmoq", "yordam bermoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "çöp kutusu nima?",
-      "answers": ["chiqindi qutisi", "idish-tovoq", "kitob javoni", "papka"],
+      "question": "fiziksel nima?",
+      "answers": ["jismoniy", "ruhiy", "aqliy", "hissiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "củn kü nima?",
-      "answers": ["chunki", "lekin", "agar", "yoki"],
+      "question": "örgüt nima?",
+      "answers": ["tashkilot (terör örgütü - terrorizm tashkiloti)", "guruh", "do‘stlar", "oilalar"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "daginik nima?",
-      "answers": ["tartibsiz", "tartibli", "toza", "kir"],
+      "question": "yetenek nima?",
+      "answers": ["iste’dod", "bilim", "tajriba", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dar nima?",
-      "answers": ["tor", "keng", "uzun", "qisqa"],
+      "question": "kurtarmak nima?",
+      "answers": ["qutqarmoq, saqlab qolmoq", "xavfga solmoq", "yo‘qotmoq", "buzmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dergi nima?",
-      "answers": ["jurnal", "gazeta", "kitob", "ro‘yxat"],
+      "question": "aşırı nima?",
+      "answers": ["oshiri daraja, haddan ortiq", "kam", "o‘rtacha", "oddiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dikkatli nima?",
-      "answers": ["e’tiborli, diqqatli", "e’tiborsiz", "tez", "sekin"],
+      "question": "fizyolojik nima?",
+      "answers": ["fiziologik", "jismoniy", "ruhiy", "texnik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dikkatsiz nima?",
-      "answers": ["e’tiborsiz, diqqatsiz", "e’tiborli", "jiddiy", "kulguli"],
+      "question": "özellik nima?",
+      "answers": ["xususiyat", "narx", "shakl", "rang"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dogru nima?",
-      "answers": ["to‘g‘ri", "xato", "buzuq", "tartibsiz"],
+      "question": "yetişkin nima?",
+      "answers": ["voyaga yetgan", "yosh", "bola", "o‘smir"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dogum tarihi nima?",
-      "answers": ["tug‘ilgan sana, oy, yil", "manzil", "ism", "yosh"],
+      "question": "motive etmek nima?",
+      "answers": ["ruhlantirmoq, motivatsiya", "tushkunlikka solmoq", "to‘xtatmoq", "rad etmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "doktor nima?",
-      "answers": ["shifokor (doktor)", "hamshira", "o‘qituvchi", "advokat"],
+      "question": "ayrıntı nima?",
+      "answers": ["batafsil", "umumiy", "qisqa", "oddiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dolu nima?",
-      "answers": ["to‘la", "bo‘sh", "och", "yopiq"],
+      "question": "geçici nima?",
+      "answers": ["vaqtinchalik", "doimiy", "uzoq", "tez"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "domates nima?",
-      "answers": ["pomidor", "sabzi", "anor", "uzum"],
+      "question": "özenli nima?",
+      "answers": ["g‘amxo‘r", "beparvo", "shoshilinch", "oddiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "dosya nima?",
-      "answers": ["fayl, papka", "jurnal", "gazeta", "kitob"],
+      "question": "zafer nima?",
+      "answers": ["g‘alaba", "mag‘lubiyat", "xato", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "durak nima?",
-      "answers": ["bekat (ostanovka)", "stansiya", "ko‘cha", "bino"],
+      "question": "paylaşmak nima?",
+      "answers": ["baham ko‘rmoq", "yashirmoq", "olmoq", "sotmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "duvar nima?",
-      "answers": ["devor", "eshik", "deraza", "pol"],
+      "question": "azim nima?",
+      "answers": ["qaror", "shubha", "xato", "tashvish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "düzenli nima?",
-      "answers": ["tartibli, muntazam", "tartibsiz", "buzuq", "xunuk"],
+      "question": "geleneksel nima?",
+      "answers": ["an’anaviy", "yangi", "oddiy", "tekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "eczaci nima?",
-      "answers": ["dorixonachi", "oshpaz", "qassob", "sotuvchi"],
+      "question": "özgü nima?",
+      "answers": ["o‘ziga xoslik", "umumiy", "bir xil", "farqli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "eglenceli nima?",
-      "answers": ["ko‘ngilochar, qiziqarli, hushchaqchaq", "jiddiy", "sokin", "asabiy"],
+      "question": "zahmetli nima?",
+      "answers": ["zahmatli, mashaqqatli", "oson", "tekin", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "eksi nima?",
-      "answers": ["ayiruv", "qo‘shuv", "ko‘paytiruv", "bo‘lish"],
+      "question": "rica etmek nima?",
+      "answers": ["iltimos qilmoq", "rad etmoq", "talab qilmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "eski nima?",
-      "answers": ["eski", "yangi", "toza", "kir"],
+      "question": "baskı nima?",
+      "answers": ["nashr, zulm", "yordam", "sovg‘a", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "esya nima?",
-      "answers": ["ashyo, narsa", "ovqat", "ichimlik", "ro‘yxat"],
+      "question": "gıda nima?",
+      "answers": ["oziq-ovqat", "suv", "ichimlik", "qadoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "evli nima?",
-      "answers": ["oilali", "bo‘ydoq", "yosh", "qari"],
+      "question": "paralel nima?",
+      "answers": ["paralel", "perpendikulyar", "qiyshiq", "to‘g‘ri"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "fakir nima?",
-      "answers": ["kambag‘al", "boy", "ozg‘in", "kuchli"],
+      "question": "zorluk nima?",
+      "answers": ["qiyinchilik", "osonlik", "yordam", "foyda"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "fark nima?",
-      "answers": ["farq", "o‘xshashlik", "son", "shakl"],
+      "question": "başarı nima?",
+      "answers": ["yutuq, muvaffaqiyat", "mag‘lubiyat", "xato", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "firin nima?",
-      "answers": ["pech, non sotadigan do‘kon", "market", "oshxona", "do‘kon"],
+      "question": "girişimci nima?",
+      "answers": ["kirishuvchan", "yopiq", "sekin", "oddiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "form nima?",
-      "answers": ["shakl", "son", "ro‘yxat", "farq"],
+      "question": "parlak nima?",
+      "answers": ["yaltiroqlik", "xira", "qorong‘i", "oddiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "gazete nima?",
-      "answers": ["gazeta", "jurnal", "kitob", "fayl"],
+      "question": "sağlamak nima?",
+      "answers": ["ta’minlash", "yo‘qotmoq", "buzmoq", "rad etmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "genellekli nima?",
-      "answers": ["odatda", "har doim", "hozir", "kecha"],
+      "question": "başlık nima?",
+      "answers": ["sarlavha", "matn", "xat", "rasm"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "genç nima?",
-      "answers": ["yosh (odam)", "qari", "oilali", "bo‘ydoq"],
+      "question": "görev nima?",
+      "answers": ["vazifa, yumush", "dam olish", "o‘yin", "sayohat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "genis nima?",
-      "answers": ["keng", "tor", "uzun", "qisqa"],
+      "question": "performans nima?",
+      "answers": ["layoqat, g‘ayrat", "dangasalik", "sekinlik", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "güçlü nima?",
-      "answers": ["kuchli", "kuchsiz", "ozg‘in", "boy"],
+      "question": "beklenti nima?",
+      "answers": ["umidvorlik", "tushkunlik", "xavotir", "shubha"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "güçsüz nima?",
-      "answers": ["kuchsiz", "kuchli", "jasur", "mehnatkash"],
+      "question": "görünüm nima?",
+      "answers": ["ko‘rinish", "yashirinlik", "xato", "so‘z"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "gün nima?",
-      "answers": ["kun", "oy", "yil", "hafta"],
+      "question": "planlama nima?",
+      "answers": ["rejalashtirish", "tartibsizlik", "kechikish", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "gündüz nima?",
-      "answers": ["kunduz", "kechqurun", "tong", "ertalab"],
+      "question": "akıldan geçirmek nima?",
+      "answers": ["hayoldan o‘tkazmoq", "unutmoq", "rad etmoq", "yozmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "güvenli nima?",
-      "answers": ["ishonchli, xatarsiz", "xatarli", "tez", "sekin"],
+      "question": "saymak nima?",
+      "answers": ["sanamoq", "ayirmoq", "qo‘shmoq", "bo‘lmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "hafta sonu nima?",
-      "answers": ["hafta oxiri", "hafta boshi", "bugun", "kecha"],
+      "question": "benzerlik nima?",
+      "answers": ["o‘xshashlik", "farqlilik", "xato", "qarshilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "hasta nima?",
-      "answers": ["kasal", "soz", "toza", "kir"],
+      "question": "görünüş nima?",
+      "answers": ["ko‘rinish", "yashirinlik", "xato", "so‘z"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "hastane nima?",
-      "answers": ["kasalxona", "do‘kon", "bino", "market"],
+      "question": "püf noktası nima?",
+      "answers": ["fokus (ishning ko‘zi)", "xato", "qiyinchilik", "oddiy narsa"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "hemsire nima?",
-      "answers": ["hamshira", "shifokor", "dorixonachi", "o‘qituvchi"],
+      "question": "aklına getirmek nima?",
+      "answers": ["hayoliga keltirmoq", "unutmoq", "rad etmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "her zaman nima?",
-      "answers": ["har doim", "odatda", "hozir", "kecha"],
+      "question": "sıyrılmak nima?",
+      "answers": ["chiqib ketmoq, siyrilmoq", "kirib qolmoq", "tiqilib qolmoq", "qolmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "hizh nima?",
-      "answers": ["tez", "sekin", "kuchli", "kuchsiz"],
+      "question": "beslenme nima?",
+      "answers": ["oziqlanish", "ichish", "uxlash", "yurish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "hostes nima?",
-      "answers": ["styuardessa", "hamshira", "sotuvchi", "sekretar"],
+      "question": "güç nima?",
+      "answers": ["kuch", "zaiflik", "sekinlik", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "içecek nima?",
-      "answers": ["ichimlik", "ovqat", "yegulik", "non"],
+      "question": "rastgele nima?",
+      "answers": ["rostdan ham", "tasodifan", "maxsus", "rejalashtirilgan"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "istasyon nima?",
-      "answers": ["stansiya", "bekat", "ko‘cha", "bino"],
+      "question": "aksamak nima?",
+      "answers": ["oqsamoq", "yurmoq", "sakramoq", "yugurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "itfaiyeci nima?",
-      "answers": ["o‘t o‘chiruvchi", "militsiya", "sotuvchi", "oshpaz"],
+      "question": "söz nima?",
+      "answers": ["va’da", "xato", "so‘z", "harakat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kaç nima?",
-      "answers": ["nechta, qancha", "nechanchi", "qayerda", "nima uchun"],
+      "question": "tutmak nima?",
+      "answers": ["ushlamoq, tutmoq", "qochmoq", "yashirmoq", "otmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kaçinci nima?",
-      "answers": ["nechanchi", "nechta", "qancha", "qayerda"],
+      "question": "birey nima?",
+      "answers": ["shaxs", "guruh", "jamiyat", "oilada"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kat nima?",
-      "answers": ["qavat", "bino", "devor", "eshik"],
+      "question": "günlük nima?",
+      "answers": ["kunlik", "haftalik", "oylik", "yillik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kirmizi nima?",
-      "answers": ["qizil", "sariq", "moviy", "yashil"],
+      "question": "rastlantı nima?",
+      "answers": ["tasodifan qarshilashish", "rejalashtirilgan", "maxsus", "doimiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kantin nima?",
-      "answers": ["oshxona (maktabda)", "oshxona (uydagi)", "market", "do‘kon"],
+      "question": "anımsamak nima?",
+      "answers": ["eslamoq", "unutmoq", "yozmoq", "o‘qimoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kapali nima?",
-      "answers": ["yopiq", "ochiq", "tor", "keng"],
+      "question": "şikayet etmek nima?",
+      "answers": ["shikoyat qilmoq", "maqtamoq", "yordam bermoq", "tinchlanmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kardes nima?",
-      "answers": ["qarindosh, jigar", "do‘st", "turist", "chet ellik"],
+      "question": "cazip nima?",
+      "answers": ["jozibali, jozibador", "qiziqsiz", "oddiy", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kasap nima?",
-      "answers": ["qassob", "oshpaz", "sotuvchi", "dorixonachi"],
+      "question": "hastalık nima?",
+      "answers": ["kasallik", "sog‘lik", "kuch", "quvvat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kasiyer nima?",
-      "answers": ["kassir, hisobchi", "sotuvchi", "oshpaz", "sekretar"],
+      "question": "risk nima?",
+      "answers": ["xavf, risk", "ishonch", "yordam", "foyda"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kisa nima?",
-      "answers": ["qisqa", "uzun", "keng", "tor"],
+      "question": "artmak nima?",
+      "answers": ["ko‘paymoq", "kamaymoq", "to‘xtamoq", "qisqarmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kiskanç nima?",
-      "answers": ["rashkchi, qizg‘anchoq", "xushmuomala", "sokin", "jiddiy"],
+      "question": "tamamlamak nima?",
+      "answers": ["tamomlamoq, bitirmoq", "boshlamoq", "kechiktirmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kibar nima?",
-      "answers": ["xushmuomala", "rashkchi", "kulguli", "asabiy"],
+      "question": "çalışan nima?",
+      "answers": ["ishlaydigan ishchi, ishchi", "dangasa", "talaba", "shifokor"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kilo nima?",
-      "answers": ["kilogramm", "son", "shakl", "ro‘yxat"],
+      "question": "hedef nima?",
+      "answers": ["maqsad, nishon", "xato", "qiyinchilik", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kirli nima?",
-      "answers": ["kir", "toza", "eski", "yangi"],
+      "question": "saklı nima?",
+      "answers": ["yashirin", "ochiq", "ko‘rinadigan", "aniq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kitaplik nima?",
-      "answers": ["kitob javoni", "chiqindi qutisi", "idish-tovoq", "papka"],
+      "question": "aşmak nima?",
+      "answers": ["ochmoq", "yopmoq", "buzmoq", "tuzatmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kolay nima?",
-      "answers": ["oson", "qiyin", "tez", "sekin"],
+      "question": "tanımlamak nima?",
+      "answers": ["aniqlamoq", "yashirmoq", "rad etmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "komik nima?",
-      "answers": ["kulguli, hazilkash", "jiddiy", "sokin", "asabiy"],
+      "question": "danışman nima?",
+      "answers": ["ilmiy rahbar", "shifokor", "o‘qituvchi", "sotuvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "konuskan nima?",
-      "answers": ["ko‘p gapiruvchi, suhbatga kirishimli", "sokin", "jiddiy", "xushmuomala"],
+      "question": "hizmet nima?",
+      "answers": ["xizmat", "sovg‘a", "qarz", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "koridor nima?",
-      "answers": ["yo‘lak, koridor", "oshxona", "xona", "devor"],
+      "question": "satış nima?",
+      "answers": ["sotish", "olish", "berish", "savdo"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kötü nima?",
-      "answers": ["yomon", "yaxshi", "toza", "kir"],
+      "question": "bahsetmek nima?",
+      "answers": ["haqida gapirmoq", "yashirmoq", "rad etmoq", "so‘ramoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kuaför nima?",
-      "answers": ["sartarosh (ayollar)", "zargar", "qassob", "oshpaz"],
+      "question": "tüketmek nima?",
+      "answers": ["iste’mol qilmoq", "saqlamoq", "yig‘moq", "sotmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "kuyumeu nima?",
-      "answers": ["zargar", "sartarosh", "sotuvchi", "ta’mirlovchi"],
+      "question": "davranış nima?",
+      "answers": ["munosabatda bo‘lish", "so‘z", "harakat", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "küçük nima?",
-      "answers": ["kichkina", "katta", "uzun", "qisqa"],
+      "question": "huy nima?",
+      "answers": ["odat", "xato", "yangi", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "lamba nima?",
-      "answers": ["lampa", "kalit", "qaychi", "eshik"],
+      "question": "saygın nima?",
+      "answers": ["hurmatli, obro‘li", "oddiy", "sekin", "qiziqsiz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "lig nima?",
-      "answers": ["liga (sportda)", "musobaga", "ro‘yxat", "son"],
+      "question": "belirlemek nima?",
+      "answers": ["bildirmoq", "yashirmoq", "rad etmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "liste nima?",
-      "answers": ["ro‘yxat", "gazeta", "jurnal", "kitob"],
+      "question": "ulaşmak nima?",
+      "answers": ["bog‘lanmoq, yetishmoq", "uzoqlashmoq", "qochmoq", "to‘xtamoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mahalle nima?",
-      "answers": ["mahalla", "ko‘cha", "bino", "shahar"],
+      "question": "değişiklik nima?",
+      "answers": ["farqlilik", "o‘xshashlik", "moslik", "bir xillik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "manav nima?",
-      "answers": ["sabzavot do‘koni", "market", "pech", "oshxona"],
+      "question": "ikramiye nima?",
+      "answers": ["bonus, ikrom qilinadigan narsa", "jarima", "qarz", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "market nima?",
-      "answers": ["market, do‘kon", "bino", "ko‘cha", "pech"],
+      "question": "seçim nima?",
+      "answers": ["tanlov, saylov", "rad etish", "xato", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mutfak nima?",
-      "answers": ["oshxona (uydagi)", "kantin", "market", "bino"],
+      "question": "bocalamak nima?",
+      "answers": ["qimirlashmoq", "to‘xtamoq", "sekinlashmoq", "yurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mutlu nima?",
-      "answers": ["baxtli, xursand", "baxtsiz", "asabiy", "sokin"],
+      "question": "denizaltı nima?",
+      "answers": ["dengiz tagi", "samolyot", "kema", "avtomobil"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "mutsuz nima?",
-      "answers": ["baxtsiz", "baxtli", "kulguli", "jiddiy"],
+      "question": "iştah nima?",
+      "answers": ["ishtaha", "uyqu", "charchoq", "kuch"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "nerede nima?",
-      "answers": ["qayerda", "nima uchun", "nechta", "nechanchi"],
+      "question": "sorumlu nima?",
+      "answers": ["mas’uliyatli", "beparvo", "dangasa", "sekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "nesne nima?",
-      "answers": ["ob‘ekt", "narsa", "ovqat", "ichimlik"],
+      "question": "cesaret etmek nima?",
+      "answers": ["jasorat qilmoq, botinmoq", "qo‘rqmoq", "qochmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "niçin nima?",
-      "answers": ["nima uchun", "qayerda", "nechta", "nechanchi"],
+      "question": "uzaklaşmak nima?",
+      "answers": ["uzoqlashmoq", "yaqinlashmoq", "qolmoq", "yurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ocak nima?",
-      "answers": ["yanvar", "fevral", "mart", "aprel"],
+      "question": "departman nima?",
+      "answers": ["bo‘lim", "firma", "do‘kon", "maktab"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ofis nima?",
-      "answers": ["ofis", "bino", "market", "oshxona"],
+      "question": "itibar nima?",
+      "answers": ["e’tibor", "beparvolik", "xato", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "olim piyat nima?",
-      "answers": ["olimpiada", "musobaga", "liga", "sayohat"],
+      "question": "sürekli nima?",
+      "answers": ["muntazam", "vaqtinchalik", "sekin", "to‘xtovsiz"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "orada nima?",
-      "answers": ["u yerda", "bu yerda", "qayerda", "joy"],
+      "question": "değerlendirmek nima?",
+      "answers": ["qadrlantirmoq, qiymatli qilmoq", "rad etmoq", "e’tiborsiz qoldirmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ögleden sonra nima?",
-      "answers": ["tushdan (obeddan) keyin", "ertalab", "kechqurun", "tong"],
+      "question": "uzamak nima?",
+      "answers": ["uzaymoq", "qisqarmoq", "to‘xtamoq", "kengaymoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ögretmen nima?",
-      "answers": ["o‘qituvchi", "shifokor", "advokat", "dorixonachi"],
+      "question": "destek nima?",
+      "answers": ["yordam", "xavf", "qiyinchilik", "rad etish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "önemli nima?",
-      "answers": ["muhim", "nomuhim", "qiyin", "oson"],
+      "question": "izin nima?",
+      "answers": ["ruxsat", "man qilish", "xato", "kechikish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "önemsiz nima?",
-      "answers": ["nomuhim", "muhim", "tez", "sekin"],
+      "question": "yaratmak nima?",
+      "answers": ["yaratmoq", "buzmoq", "yo‘qotmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "pahali nima?",
-      "answers": ["qimmat", "arzon", "toza", "kir"],
+      "question": "depolamak nima?",
+      "answers": ["arxivlamoq", "sotmoq", "tarqatmoq", "ochmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "pastane nima?",
-      "answers": ["qandolatxona", "market", "pech", "do‘kon"],
+      "question": "devlet nima?",
+      "answers": ["davlat", "shahar", "qishloq", "uy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "pembe nima?",
-      "answers": ["pushti", "qizil", "sariq", "moviy"],
+      "question": "katkı nima?",
+      "answers": ["hissa", "xato", "qiyinchilik", "foyda"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "polis nima?",
-      "answers": ["militsiya", "o‘t o‘chiruvchi", "sotuvchi", "oshpaz"],
+      "question": "şart nima?",
+      "answers": ["shart", "xohish", "sovg‘a", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "postane nima?",
-      "answers": ["pochtaxona", "bino", "market", "kasalxona"],
+      "question": "yenilemek nima?",
+      "answers": ["yangilamoq", "eskitmoq", "buzmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "projector nima?",
-      "answers": ["proyektor", "lampa", "radio", "telefon"],
+      "question": "dokunmak nima?",
+      "answers": ["teginmoq", "qochmoq", "yashirmoq", "otmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "psikolog nima?",
-      "answers": ["psixolog", "shifokor", "o‘qituvchi", "advokat"],
+      "question": "dikiş nima?",
+      "answers": ["tikish", "kesish", "yuvish", "bo‘yash"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sayi nima?",
-      "answers": ["son", "shakl", "ro‘yxat", "farq"],
+      "question": "kazanç nima?",
+      "answers": ["qozonilgan narsa, foyda", "zarar", "qarz", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sabah nima?",
-      "answers": ["ertalab, tong", "kechqurun", "kunduz", "tushdan keyin"],
+      "question": "şikayetçi nima?",
+      "answers": ["shikoyat qilgan odam", "xursand odam", "yordamchi", "sotuvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "saglam nima?",
-      "answers": ["soz, sog‘lom", "kasal", "horg‘in", "ozg‘in"],
+      "question": "yıpratmak nima?",
+      "answers": ["eskirtib tashlamoq, yirtib yubormoq", "tuzatmoq", "yaxshilamoq", "saqlamoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sehpa nima?",
-      "answers": ["gazeta stoli (qahva stoli)", "kitob javoni", "idish-tovoq", "stul"],
+      "question": "doğrultu nima?",
+      "answers": ["yo‘nalish", "xato", "to‘xtash", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sekreter nima?",
-      "answers": ["sekretar", "sotuvchi", "oshpaz", "styuardessa"],
+      "question": "kıdemli nima?",
+      "answers": ["tajribali, stajli", "yosh", "yangicha", "oddiy"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "semt nima?",
-      "answers": ["guzar, massiv", "mahalla", "ko‘cha", "shahar"],
+      "question": "tanıdık nima?",
+      "answers": ["tanish", "begona", "do‘st", "dushman"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sessiz nima?",
-      "answers": ["sokin, kamgap", "ko‘p gapiruvchi", "kulguli", "asabiy"],
+      "question": "dönüşmek nima?",
+      "answers": ["aylanmoq", "to‘xtamoq", "qolmoq", "yurmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sicak nima?",
-      "answers": ["issiq", "sovuq", "toza", "kir"],
+      "question": "yol açmak nima?",
+      "answers": ["yo‘l ochmoq", "yo‘l yopmoq", "to‘xtatmoq", "kechiktirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sifat nima?",
-      "answers": ["sifat", "olmosh", "fe‘l", "ravish"],
+      "question": "dolgun nima?",
+      "answers": ["to‘la, to‘liq", "bo‘sh", "qisqa", "sekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sinirli nima?",
-      "answers": ["asabiy, jahldor", "sokin", "kulguli", "xushmuomala"],
+      "question": "kişilik nima?",
+      "answers": ["shaxiyat", "guruh", "jamiyat", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "soguk nima?",
-      "answers": ["sovuq", "issiq", "toza", "kir"],
+      "question": "tanım nima?",
+      "answers": ["ta’rif", "xato", "so‘z", "harakat"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sokak nima?",
-      "answers": ["ko‘cha", "bino", "mahalla", "shahar"],
+      "question": "eleştirmek nima?",
+      "answers": ["tanqid qilmoq", "maqtamoq", "yordam bermoq", "qabul qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sosyal nima?",
-      "answers": ["sotsial, ijtimoiy kirishimli", "sokin", "jiddiy", "kulguli"],
+      "question": "yönetmek nima?",
+      "answers": ["boshqarmoq", "qochmoq", "to‘xtamoq", "rad etmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sehir nima?",
-      "answers": ["shahar", "mahalla", "ko‘cha", "bino"],
+      "question": "dönüm noktası nima?",
+      "answers": ["o‘zgarish nuqtasi", "boshlanish", "tugatish", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "simdi nima?",
-      "answers": ["hozir", "kecha", "bugun", "ertaga"],
+      "question": "konteynır nima?",
+      "answers": ["konteyner", "quti", "sumka", "qadoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "simdilik nima?",
-      "answers": ["hozircha", "har doim", "odatda", "kecha"],
+      "question": "toptancı nima?",
+      "answers": ["ulgurji savdogar", "chakana sotuvchi", "shifokor", "o‘qituvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "sisman nima?",
-      "answers": ["semiz", "ozg‘in", "kuchli", "kuchsiz"],
+      "question": "geliştirmek nima?",
+      "answers": ["rivojlantirmoq", "buzmoq", "kamaytirmoq", "to‘xtatmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tabak nima?",
-      "answers": ["idish-tovoq", "chiqindi qutisi", "kitob javoni", "stul"],
+      "question": "gerektirmek nima?",
+      "answers": ["kerakli bo‘lish, talab qilmoq", "rad etmoq", "tekin qilmoq", "osonlashtirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tamirci nima?",
-      "answers": ["ta’mirlovchi", "sotuvchi", "oshpaz", "qassob"],
+      "question": "yönlendirmek nima?",
+      "answers": ["yo‘naltirmoq", "to‘xtatmoq", "yashirmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tarih nima?",
-      "answers": ["tarix, sana", "manzil", "yosh", "ism"],
+      "question": "duruş nima?",
+      "answers": ["turish", "o‘tirish", "yurish", "sakrash"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tatil nima?",
-      "answers": ["ta’til, bayram (kanikul)", "sayohat", "musobaga", "ish"],
+      "question": "korkunç nima?",
+      "answers": ["qo‘rquv, qo‘rqinch", "xursandchilik", "tinchlik", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tehlikeli nima?",
-      "answers": ["xatarli, tahlikali", "ishonchli", "tez", "sekin"],
+      "question": "tarz nima?",
+      "answers": ["uslub", "xato", "oddiy", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tembel nima?",
-      "answers": ["yalqov, ishyoqmas, tambal", "mehnatkash", "jasur", "tartibli"],
+      "question": "düşük nima?",
+      "answers": ["past", "yuqori", "o‘rtacha", "tekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "temiz nima?",
-      "answers": ["toza", "kir", "eski", "yangi"],
+      "question": "liderlik nima?",
+      "answers": ["liderlik, yetakchilik", "qo‘rquv", "xato", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "temizlik görevlisi nima?",
-      "answers": ["tozalovchi", "sotuvchi", "oshpaz", "sekretar"],
+      "question": "tehlike nima?",
+      "answers": ["tahlika, xavf-xatar", "ishonch", "yordam", "foyda"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tezgahtar nima?",
-      "answers": ["sotuvchi", "oshpaz", "qassob", "ta’mirlovchi"],
+      "question": "görevlendirmek nima?",
+      "answers": ["ma’lum vazifa bilan tayinlamoq", "rad etmoq", "to‘xtatmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "tuzlu nima?",
-      "answers": ["tuzli, sho‘r", "shirin", "achchiq", "sovuq"],
+      "question": "yüceltmek nima?",
+      "answers": ["ulug‘lash", "pastlatmoq", "rad etmoq", "xato qilmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "ucuz nima?",
-      "answers": ["arzon", "qimmat", "toza", "kir"],
+      "question": "editör nima?",
+      "answers": ["tahrirchi", "yozuvchi", "shifokor", "sotuvchi"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "uzak nima?",
-      "answers": ["uzoq", "yaqin", "tez", "sekin"],
+      "question": "temel nima?",
+      "answers": ["asos, tamal", "ustun", "devor", "pol"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "uzun nima?",
-      "answers": ["uzun", "qisqa", "keng", "tor"],
+      "question": "gütmek nima?",
+      "answers": ["hayvonlarni yetaklab boqmoq, ishni amalga oshirishga harakat qilmoq", "to‘xtatmoq", "rad etmoq", "yashirmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "üst nima?",
-      "answers": ["ust, tepa", "ost", "joy", "yon"],
+      "question": "yükseltmek nima?",
+      "answers": ["yuksaltish, oshirish", "pastlatmoq", "kamaytirmoq", "to‘xtatmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "var nima?",
-      "answers": ["bor", "yo‘q", "ko‘p", "kam"],
+      "question": "maaş nima?",
+      "answers": ["oylik, maosh", "qarz", "sovg‘a", "tölo‘v"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "veteriner nima?",
-      "answers": ["veterinar", "shifokor", "o‘qituvchi", "advokat"],
+      "question": "eksiklik nima?",
+      "answers": ["kamchilik", "to‘liqlik", "foyda", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yakin nima?",
-      "answers": ["yaqin", "uzoq", "tez", "sekin"],
+      "question": "güvenmek nima?",
+      "answers": ["ishonmoq", "shubhalanmoq", "rad etmoq", "qochmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yanlis nima?",
-      "answers": ["xato, yanglish", "to‘g‘ri", "tartibli", "buzuq"],
+      "question": "zorlamak nima?",
+      "answers": ["majburlamoq", "ruxsat bermoq", "yordam bermoq", "rad etmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yarisma nima?",
-      "answers": ["musobaga", "sayohat", "ta’til", "liga"],
+      "question": "macera nima?",
+      "answers": ["sarguzasht", "tinchlik", "oddiy", "qiyinchilik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yastik nima?",
-      "answers": ["yostiq", "idish-tovoq", "kitob javoni", "stul"],
+      "question": "tempo nima?",
+      "answers": ["tezlik", "sekinlik", "to‘xtash", "xato"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yas nima?",
-      "answers": ["yosh", "yil", "oy", "kun"],
+      "question": "elverişsiz nima?",
+      "answers": ["noqulay", "qulay", "oson", "tekin"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yaçh nima?",
-      "answers": ["yoshi katta, qari", "yosh", "oilali", "bo‘ydoq"],
+      "question": "mandıracılık nima?",
+      "answers": ["mol fermachiligi bilan shug‘ullanish, sut fermasi", "meva yetishtirish", "qadoqlash", "sotish"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yavas nima?",
-      "answers": ["sekin, bosiq", "tez", "kuchli", "kuchsiz"],
+      "question": "usul nima?",
+      "answers": ["usul", "xato", "qiyinchilik", "yordam"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yazi tahtasi nima?",
-      "answers": ["doska, yozuv taxtasi", "stul", "kitob javoni", "papka"],
+      "question": "ilgi çekmek nima?",
+      "answers": ["e’tiborni jalb qilmoq", "e’tiborsiz qoldirmoq", "yashirmoq", "rad etmoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yeni nima?",
-      "answers": ["yangi", "eski", "toza", "kir"],
+      "question": "zorlaştırmak nima?",
+      "answers": ["qiyinlashtirmoq", "osonlashtirmoq", "to‘xtatmoq", "yordam bermoq"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yer nima?",
-      "answers": ["joy", "ko‘cha", "bino", "manzil"],
+      "question": "engel nima?",
+      "answers": ["to‘siq", "yordam", "foyda", "osonlik"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yil nima?",
-      "answers": ["yil", "oy", "hafta", "kun"],
+      "question": "memnuniyetsiz nima?",
+      "answers": ["norozi", "xursand", "tinch", "qiziqarli"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yiyecek nima?",
-      "answers": ["yegulik", "ovqat", "ichimlik", "non"],
+      "question": "ücra nima?",
+      "answers": ["ko‘zga tashlanmaydigan, juda uzoqda bo‘lgan", "yaqin", "markaziy", "qulay"],
       "correct_answer": 0,
       "time": 10
     },
     {
-      "question": "yogun nima?",
-      "answers": ["band", "toza", "ozg‘in", "boy"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "yok nima?",
-      "answers": ["yo‘q", "ha", "ko‘p", "kam"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "yorgun nima?",
-      "answers": ["horg‘in, charchagan", "charchatuvchi", "yumshoq", "qiyin"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "yorucu nima?",
-      "answers": ["charchatuvchi", "horg‘in", "yumshoq", "ozg‘in"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "yumusak nima?",
-      "answers": ["yumshoq", "qiyin", "charchatuvchi", "band"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "zamir nima?",
-      "answers": ["olmosh (so‘z turkumi)", "fe‘l", "sifat", "ravish"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "zayif nima?",
-      "answers": ["ozg‘in", "boy", "qiyin", "yumshoq"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "zengin nima?",
-      "answers": ["boy", "ozg‘in", "band", "toza"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "zor nima?",
-      "answers": ["qiyin", "oson", "tez", "sekin"],
-      "correct_answer": 0,
-      "time": 10
-    },
-    {
-      "question": "aramak nima?",
-      "answers": ["qidirmoq, qo‘ng‘iroq qilmoq", "yozmoq", "o‘qimoq", "tinglamoq"],
+      "question": "imza atmak nima?",
+      "answers": ["imzolamoq", "rad etmoq", "yozmoq", "o‘qimoq"],
       "correct_answer": 0,
       "time": 10
     }
