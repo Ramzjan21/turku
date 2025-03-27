@@ -187,7 +187,7 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
 
     quiz_verileri = quiz_katalogu[bolum][quiz_idx]
     toplam_soru = len(quiz_verileri["questions"])
-    if baslangic_idx >= toplam_soru or bitis_idx > toplam_soru or baslangic_idx >= bitis_idx:
+    if baslangic_idx >= toplam_soru or bitis_idx > toplam_soru or bas SECRETlangic_idx >= bitis_idx:
         await context.bot.send_message(sohbet_id, "Hata! Noto‘g‘ri oralik tanlandi.")
         return
 
@@ -205,7 +205,6 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         "mevcut_soru": 0,
         "anket_mesajlari": {},
         "dogru_secenek_idleri": {},
-        "son_zamanlayici_metin": "",
         "foydalanuvchilar": {},
         "mevcut_bolum_testlari": quiz_katalogu[bolum],
         "mevcut_test_idx": quiz_idx
@@ -220,7 +219,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
     veri = kullanici_verileri[sohbet_id]
     if veri["mevcut_soru"] < len(veri["questions"]):
         soru = veri["questions"][veri["mevcut_soru"]]
-        bekleme_suresi = soru.get("time", 10)
+        bekleme_suresi = soru.get("time", 10)  # JSON fayldan vaqt olinadi, aks holda 10 soniya
 
         secenekler = soru["answers"].copy()
         dogru_cevap = soru["correct_answer"]
@@ -233,69 +232,29 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
             options=secenekler,
             type=Poll.QUIZ,
             correct_option_id=yeni_dogru_secenek_id,
-            is_anonymous=False
+            is_anonymous=False,
+            open_period=bekleme_suresi  # Pollning vaqt chegarasi qo‘shildi
         )
         veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
         veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
         veri["baslangic_vaqti"] = datetime.now()
-
-        zamanlayici_mesaji = await context.bot.send_message(sohbet_id, f"Qolgan vaqt: {bekleme_suresi} soniya")
-        veri["son_zamanlayici_metin"] = f"Qolgan vaqt: {bekleme_suresi} soniya"
-
-        await gorevleri_temizle(sohbet_id)
-        veri["mevcut_gorev"] = asyncio.create_task(soru_atlama(update, context, sohbet_id, bekleme_suresi))
-        veri["zamanlayici_gorev"] = asyncio.create_task(zamanlayiciyi_guncelle(update, context, sohbet_id, zamanlayici_mesaji.message_id, bekleme_suresi))
     else:
         await keyingi_testga_otish(update, context, sohbet_id)
 
-async def zamanlayiciyi_guncelle(update: Update, context: CallbackContext, sohbet_id: int, mesaj_id: int, bekleme_suresi: int):
-    try:
-        veri = kullanici_verileri.get(sohbet_id)
-        if not veri:
-            return
-
-        for kalan in range(bekleme_suresi, -1, -1):
-            yeni_metin = f"Qolgan vaqt: {kalan} soniya"
-            if yeni_metin != veri.get("son_zamanlayici_metin"):
-                await context.bot.edit_message_text(
-                    chat_id=sohbet_id,
-                    message_id=mesaj_id,
-                    text=yeni_metin
-                )
-                veri["son_zamanlayici_metin"] = yeni_metin
-            await asyncio.sleep(1)
-    except asyncio.CancelledError:
-        pass
-    except Exception as hata:
-        print(f"Vaqtni yangilashda xato: {hata}")
-
-async def soru_atlama(update: Update, context: CallbackContext, sohbet_id: int, bekleme_suresi: int):
-    try:
-        await asyncio.sleep(bekleme_suresi)
-        veri = kullanici_verileri.get(sohbet_id)
-        if veri and veri["mevcut_soru"] < len(veri["questions"]):
-            veri["mevcut_soru"] += 1
-            await sonraki_soruyu_gonder(update, context, sohbet_id)
-    except asyncio.CancelledError:
-        pass
-    except Exception as hata:
-        print(f"Soru atlamada xato: {hata}")
-
 async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_id: int):
-    veri = kullanici_verileri.get(sohbet_id)
-    if not veri:
-        return
-
+    veri = kullanici_verileri[sohbet_id]
     veri["mevcut_test_idx"] += 1
-    if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
-        quiz_verileri = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
-        sorular = quiz_verileri["questions"].copy()
-        random.shuffle(sorular)
 
+    if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
+        yeni_quiz = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
+        await context.bot.send_message(sohbet_id, f"📌 {yeni_quiz['name']} testi boshlanmoqda!")
+        sorular = yeni_quiz["questions"].copy()
+        random.shuffle(sorular)
         veri["questions"] = sorular
         veri["mevcut_soru"] = 0
         veri["quiz_idx"] = veri["mevcut_test_idx"]
-        await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi boshlanmoqda!")
+        veri["anket_mesajlari"] = {}
+        veri["dogru_secenek_idleri"] = {}
         await sonraki_soruyu_gonder(update, context, sohbet_id)
     else:
         await quiz_bitir(update, context, sohbet_id)
@@ -305,7 +264,7 @@ async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
         return
 
     veri = kullanici_verileri[sohbet_id]
-    natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Reyting:\n"
+    natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Natijalar:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
     for i, (foydalanuvchi_id, info) in enumerate(reyting, 1):
@@ -334,18 +293,24 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
     if anket_id not in veri["anket_mesajlari"]:
         return
 
+    if "foydalanuvchilar" not in veri:
+        veri["foydalanuvchilar"] = {}
+
     if foydalanuvchi_id not in veri["foydalanuvchilar"]:
         veri["foydalanuvchilar"][foydalanuvchi_id] = {"skor": 0, "umumiy_tezlik": 0, "javoblar_soni": 0}
 
+    dogru_secenek_id = veri["dogru_secenek_idleri"][anket_id]
     foydalanuvchi = veri["foydalanuvchilar"][foydalanuvchi_id]
     vaqt_farqi = (datetime.now() - veri["baslangic_vaqti"]).total_seconds()
-    dogru_secenek_id = veri["dogru_secenek_idleri"][anket_id]
 
     if cevap == dogru_secenek_id:
         foydalanuvchi["skor"] += 1
-
     foydalanuvchi["umumiy_tezlik"] = ((foydalanuvchi["umumiy_tezlik"] * foydalanuvchi["javoblar_soni"]) + vaqt_farqi) / (foydalanuvchi["javoblar_soni"] + 1)
     foydalanuvchi["javoblar_soni"] += 1
+
+    # Vaqt tugaguncha kutish pollning o‘zi orqali boshqariladi, shuning uchun bu yerda qo‘shimcha tekshiruv kerak emas
+    veri["mevcut_soru"] += 1
+    await sonraki_soruyu_gonder(update, context, sohbet_id)
 
 async def reyting(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
@@ -370,12 +335,6 @@ async def gorevleri_temizle(sohbet_id):
             veri["mevcut_gorev"].cancel()
             try:
                 await veri["mevcut_gorev"]
-            except asyncio.CancelledError:
-                pass
-        if "zamanlayici_gorev" in veri and not veri["zamanlayici_gorev"].done():
-            veri["zamanlayici_gorev"].cancel()
-            try:
-                await veri["zamanlayici_gorev"]
             except asyncio.CancelledError:
                 pass
 
