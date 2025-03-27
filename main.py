@@ -207,7 +207,8 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         "anket_mesajlari": {},
         "dogru_secenek_idleri": {},
         "son_zamanlayici_metin": "",
-        "foydalanuvchilar": {}  # {foydalanuvchi_id: {skor, tezlik}}
+        "foydalanuvchilar": {},
+        "javob_berganlar": set()  # Javob bergan foydalanuvchilarni saqlash uchun
     }
 
     await sonraki_soruyu_gonder(update, context, sohbet_id)
@@ -237,6 +238,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
         veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
         veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
         veri["baslangic_vaqti"] = datetime.now()
+        veri["javob_berganlar"] = set()  # Har bir yangi savol uchun tozalanadi
 
         zamanlayici_mesaji = await context.bot.send_message(sohbet_id, f"Qolgan vaqt: {bekleme_suresi} soniya")
         veri["son_zamanlayici_metin"] = f"Qolgan vaqt: {bekleme_suresi} soniya"
@@ -320,6 +322,7 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
     if foydalanuvchi_id not in veri["foydalanuvchilar"]:
         veri["foydalanuvchilar"][foydalanuvchi_id] = {"skor": 0, "umumiy_tezlik": 0, "javoblar_soni": 0}
 
+    veri["javob_berganlar"].add(foydalanuvchi_id)
     dogru_secenek_id = veri["dogru_secenek_idleri"][anket_id]
     foydalanuvchi = veri["foydalanuvchilar"][foydalanuvchi_id]
     vaqt_farqi = (datetime.now() - veri["baslangic_vaqti"]).total_seconds()
@@ -334,8 +337,10 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
         foydalanuvchi["javoblar_soni"] += 1
         await context.bot.send_message(sohbet_id, f"{update.poll_answer.user.first_name} noto‘g‘ri javob berdi!")
 
-    # Agar barcha foydalanuvchilar javob bergan bo‘lsa, keyingi savolga o‘tish
-    if len(veri["foydalanuvchilar"]) >= (await context.bot.get_chat_member_count(sohbet_id)) - 1:  # Botni hisobga olmaymiz
+    # Guruh a'zolarining 50% javob bergan bo‘lsa yoki vaqt tugasa, keyingi savolga o‘tish
+    guruh_azolari_soni = (await context.bot.get_chat_member_count(sohbet_id)) - 1  # Botni hisobga olmaymiz
+    javob_foizi = len(veri["javob_berganlar"]) / guruh_azolari_soni
+    if javob_foizi >= 0.5:  # 50% dan ko‘p javob bergan bo‘lsa
         await gorevleri_temizle(sohbet_id)
         veri["mevcut_soru"] += 1
         await sonraki_soruyu_gonder(update, context, sohbet_id)
