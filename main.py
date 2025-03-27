@@ -253,7 +253,7 @@ async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_
     if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
         yeni_quiz = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
         await context.bot.send_message(sohbet_id, f"📌 {yeni_quiz['name']} testi boshlanmoqda!")
-        sorular = yeni_quiz["questions"].  = yeni_quiz["questions"].copy()
+        sorular   = yeni_quiz["questions"].copy()
         random.shuffle(sorular)
         veri["questions"] = sorular
         veri["mevcut_soru"] = 0
