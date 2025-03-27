@@ -163,7 +163,7 @@ async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
         return
 
     bolum = kullanici_verileri[sohbet_id]["bolum"]
-    quiz_idx = kullanici_verileri[so 等价于sohbet_id]["start_idx"]
+    quiz_idx = kullanici_verileri[sohbet_id]["start_idx"]
     baslangic_idx = kullanici_verileri[sohbet_id]["start_idx"]
     bitis_idx = kullanici_verileri[sohbet_id]["end_idx"]
     await gorevleri_temizle(sohbet_id)
