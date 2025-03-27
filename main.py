@@ -163,7 +163,7 @@ async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
         return
 
     bolum = kullanici_verileri[sohbet_id]["bolum"]
-    quiz_idx = kullanici_verileri[sohbet_id]["start_idx"]
+    quiz_idx = kullanici_verileri[sohbet_id]["quiz_idx"]
     baslangic_idx = kullanici_verileri[sohbet_id]["start_idx"]
     bitis_idx = kullanici_verileri[sohbet_id]["end_idx"]
     await gorevleri_temizle(sohbet_id)
@@ -205,6 +205,7 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         "mevcut_soru": 0,
         "anket_mesajlari": {},
         "dogru_secenek_idleri": {},
+        "son_zamanlayici_metin": "",
         "foydalanuvchilar": {},
         "mevcut_bolum_testlari": quiz_katalogu[bolum],
         "mevcut_test_idx": quiz_idx
@@ -233,13 +234,13 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
             type=Poll.QUIZ,
             correct_option_id=yeni_dogru_secenek_id,
             is_anonymous=False,
-            open_period=bekleme_suresi
+            open_period=bekleme_suresi  # Poll vaqt chegarasi
         )
         veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
         veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
         veri["baslangic_vaqti"] = datetime.now()
 
-        # Vaqt tugaguncha kutish
+        # Vaqt tugashini kutamiz
         await asyncio.sleep(bekleme_suresi)
         veri["mevcut_soru"] += 1
         await sonraki_soruyu_gonder(update, context, sohbet_id)
@@ -253,7 +254,7 @@ async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_
     if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
         yeni_quiz = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
         await context.bot.send_message(sohbet_id, f"📌 {yeni_quiz['name']} testi boshlanmoqda!")
-        sorular   = yeni_quiz["questions"].copy()
+        sorular = yeni_quiz["questions"].copy()
         random.shuffle(sorular)
         veri["questions"] = sorular
         veri["mevcut_soru"] = 0
@@ -332,12 +333,14 @@ async def reyting(update: Update, context: CallbackContext) -> None:
 async def gorevleri_temizle(sohbet_id):
     if sohbet_id in kullanici_verileri:
         veri = kullanici_verileri[sohbet_id]
+        # Faqat agar "mevcut_gorev" mavjud bo‘lsa va tugamagan bo‘lsa
         if "mevcut_gorev" in veri and not veri["mevcut_gorev"].done():
             veri["mevcut_gorev"].cancel()
             try:
                 await veri["mevcut_gorev"]
             except asyncio.CancelledError:
                 pass
+        # "zamanlayici_gorev" ni olib tashladik, chunki endi foydalanilmaydi
 
 def main():
     uygulama = Application.builder().token(TOKEN).build()
