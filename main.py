@@ -163,7 +163,7 @@ async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
         return
 
     bolum = kullanici_verileri[sohbet_id]["bolum"]
-    quiz_idx = kullanici_verileri[sohbet_id]["quiz_idx"]
+    quiz_idx = kullanici_verileri[so 等价于sohbet_id]["start_idx"]
     baslangic_idx = kullanici_verileri[sohbet_id]["start_idx"]
     bitis_idx = kullanici_verileri[sohbet_id]["end_idx"]
     await gorevleri_temizle(sohbet_id)
@@ -219,7 +219,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
     veri = kullanici_verileri[sohbet_id]
     if veri["mevcut_soru"] < len(veri["questions"]):
         soru = veri["questions"][veri["mevcut_soru"]]
-        bekleme_suresi = soru.get("time", 10)  # JSON fayldan vaqt olinadi, aks holda 10 soniya
+        bekleme_suresi = soru.get("time", 10)
 
         secenekler = soru["answers"].copy()
         dogru_cevap = soru["correct_answer"]
@@ -233,11 +233,16 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
             type=Poll.QUIZ,
             correct_option_id=yeni_dogru_secenek_id,
             is_anonymous=False,
-            open_period=bekleme_suresi  # Pollning vaqt chegarasi qo‘shildi
+            open_period=bekleme_suresi
         )
         veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
         veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
         veri["baslangic_vaqti"] = datetime.now()
+
+        # Vaqt tugaguncha kutish
+        await asyncio.sleep(bekleme_suresi)
+        veri["mevcut_soru"] += 1
+        await sonraki_soruyu_gonder(update, context, sohbet_id)
     else:
         await keyingi_testga_otish(update, context, sohbet_id)
 
@@ -248,7 +253,7 @@ async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_
     if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
         yeni_quiz = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
         await context.bot.send_message(sohbet_id, f"📌 {yeni_quiz['name']} testi boshlanmoqda!")
-        sorular = yeni_quiz["questions"].copy()
+        sorular = yeni_quiz["questions"].  = yeni_quiz["questions"].copy()
         random.shuffle(sorular)
         veri["questions"] = sorular
         veri["mevcut_soru"] = 0
@@ -307,10 +312,6 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
         foydalanuvchi["skor"] += 1
     foydalanuvchi["umumiy_tezlik"] = ((foydalanuvchi["umumiy_tezlik"] * foydalanuvchi["javoblar_soni"]) + vaqt_farqi) / (foydalanuvchi["javoblar_soni"] + 1)
     foydalanuvchi["javoblar_soni"] += 1
-
-    # Vaqt tugaguncha kutish pollning o‘zi orqali boshqariladi, shuning uchun bu yerda qo‘shimcha tekshiruv kerak emas
-    veri["mevcut_soru"] += 1
-    await sonraki_soruyu_gonder(update, context, sohbet_id)
 
 async def reyting(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
