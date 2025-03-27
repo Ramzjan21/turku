@@ -47,7 +47,7 @@ async def bot_komutlarini_ayarla(bot):
         BotCommand("start", "Testni boshlash"),
         BotCommand("restart", "Testni qayta boshlash"),
         BotCommand("stop", "Testni to‘xtatish"),
-        BotCommand("quizlist", "TestLAR ro‘yxati"),
+        BotCommand("quizlist", "Testlar ro‘yxati"),
         BotCommand("ranking", "Reytingni ko‘rish")
     ]
     await bot.set_my_commands(komutlar)
@@ -238,7 +238,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
     veri = kullanici_verileri[sohbet_id]
     if veri["mevcut_soru"] < len(veri["questions"]):
         soru = veri["questions"][veri["mevcut_soru"]]
-        bekleme_suresi = soru.get("time", 10)  # Vaqt faqat ko'rinish uchun
+        bekleme_suresi = soru.get("time", 10)  # Har bir savol uchun vaqt
         logger.info(f"Yangi savol: sohbet_id={sohbet_id}, soru_idx={veri['mevcut_soru']}, vaqt={bekleme_suresi}")
 
         secenekler = soru["answers"].copy()
@@ -254,7 +254,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
                 type=Poll.QUIZ,
                 correct_option_id=yeni_dogru_secenek_id,
                 is_anonymous=False,
-                open_period=bekleme_suresi  # Vaqt faqat ko'rinish uchun
+                open_period=bekleme_suresi  # Vaqt chegarasi
             )
             veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
             veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
@@ -262,8 +262,13 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
         except Exception as e:
             logger.error(f"Anket yuborishda xato: sohbet_id={sohbet_id}, xato={e}")
             return
+
+        # Vaqt tugashini kutamiz
+        await asyncio.sleep(bekleme_suresi)
+        if sohbet_id in kullanici_verileri and veri["is_running"]:
+            veri["mevcut_soru"] += 1
+            await sonraki_soruyu_gonder(update, context, sohbet_id)
     else:
-        # 20 talik savollar tugagach, testni to'xtatib natija chiqaramiz
         await quiz_bitir(update, context, sohbet_id)
 
 async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_id: int):
@@ -349,10 +354,6 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
     foydalanuvchi["umumiy_tezlik"] = ((foydalanuvchi["umumiy_tezlik"] * foydalanuvchi["javoblar_soni"]) + vaqt_farqi) / (foydalanuvchi["javoblar_soni"] + 1)
     foydalanuvchi["javoblar_soni"] += 1
     logger.info(f"Javob qabul qilindi: sohbet_id={sohbet_id}, foydalanuvchi_id={foydalanuvchi_id}, skor={foydalanuvchi['skor']}")
-
-    # Keyingi savolga o'tamiz
-    veri["mevcut_soru"] += 1
-    await sonraki_soruyu_gonder(update, context, sohbet_id)
 
 async def reyting(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
