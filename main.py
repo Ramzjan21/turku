@@ -187,7 +187,7 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
 
     quiz_verileri = quiz_katalogu[bolum][quiz_idx]
     toplam_soru = len(quiz_verileri["questions"])
-    if baslangic_idx >= toplam_soru or bitis_idx > toplam_soru or bas SECRETlangic_idx >= bitis_idx:
+    if baslangic_idx >= toplam_soru or bitis_idx > toplam_soru or baslangic_idx >= bitis_idx:
         await context.bot.send_message(sohbet_id, "Hata! Noto‘g‘ri oralik tanlandi.")
         return
 
