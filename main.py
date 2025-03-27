@@ -124,7 +124,7 @@ async def aralik_secimi_goster(update: Update, context: CallbackContext, sohbet_
     toplam_soru = len(quiz_verileri["questions"])
 
     araliklar = []
-    adim = 20
+    adim = 20  # Har bir bo'limda 20 ta savol
     for baslangic in range(0, toplam_soru, adim):
         bitis = min(baslangic + adim, toplam_soru)
         araliklar.append((baslangic, bitis))
@@ -138,7 +138,7 @@ async def aralik_secimi_goster(update: Update, context: CallbackContext, sohbet_
         for baslangic, bitis in araliklar
     ]
     cevap_isareti = InlineKeyboardMarkup(klavye)
-    await context.bot.send_message(sohbet_id, f"{quiz_verileri['name']} uchun savol oralig‘ini tanlang:", reply_markup=cevap_isareti)
+    await context.bot.send_message(sohbet_id, f"{quiz_verileri['name']} uchun savol oralig‘ini tanlang (20 tadan bo‘lingan):", reply_markup=cevap_isareti)
 
 async def dugme_yonetici(update: Update, context: CallbackContext) -> None:
     sorgu = update.callback_query
@@ -207,7 +207,7 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         logger.error(f"Noto‘g‘ri oralik: baslangic_idx={baslangic_idx}, bitis_idx={bitis_idx}, toplam_soru={toplam_soru}")
         return
 
-    await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi boshlanmoqda! ({baslangic_idx + 1}-{bitis_idx} savollar)")
+    await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi boshlanmoqda! ({baslangic_idx + 1}-{bitis_idx} savollar, 20 tadan bo‘lingan)")
     logger.info(f"Test boshlandi: sohbet_id={sohbet_id}, bolum={bolum}, quiz_idx={quiz_idx}")
 
     sorular = quiz_verileri["questions"][baslangic_idx:bitis_idx].copy()
@@ -294,7 +294,7 @@ async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
         return
 
     veri = kullanici_verileri[sohbet_id]
-    veri["is_running"] = False  #Test jarayonini to‘xtatamiz
+    veri["is_running"] = False  # Test jarayonini to'xtatamiz
     natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Natijalar:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
@@ -379,7 +379,7 @@ async def reyting(update: Update, context: CallbackContext) -> None:
 async def gorevleri_temizle(sohbet_id):
     if sohbet_id in kullanici_verileri:
         veri = kullanici_verileri[sohbet_id]
-        veri["is_running"] = False  # Test jarayonini to‘xtatamiz
+        veri["is_running"] = False  # Test jarayonini to'xtatamiz
         logger.info(f"Gorevler tozalandi: sohbet_id={sohbet_id}")
 
 def main():
@@ -416,3 +416,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
