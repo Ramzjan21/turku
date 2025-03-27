@@ -7,9 +7,14 @@ import os
 import signal
 import atexit
 from datetime import datetime
+import logging
+
+# Logging sozlamalari
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 TOKEN = os.getenv("BOT_TOKEN", "7061995193:AAFMOJNR39xJdMqwDBTqShPa_ayXRfwDyzk")
-kullanici_verileri = {}  # {guruh_id: {...}}
+kullanici_verileri = {}  # {sohbet_id: {...}}
 quiz_katalogu = {"A1": [], "A2": [], "B1": [], "B2": []}
 
 def quiz_dosyalarini_yukle(dizin="quizzes"):
@@ -35,7 +40,7 @@ def quiz_dosyalarini_yukle(dizin="quizzes"):
                             quiz_verileri["bolum"] = bolum
                             quiz_katalogu[bolum].append(quiz_verileri)
                 except (json.JSONDecodeError, FileNotFoundError) as hata:
-                    print(f"{bolum}/{dosya_adi} dosyasını okurken hata: {hata}")
+                    logger.error(f"{bolum}/{dosya_adi} dosyasını okurken hata: {hata}")
 
 async def bot_komutlarini_ayarla(bot):
     komutlar = [
@@ -50,6 +55,7 @@ async def bot_komutlarini_ayarla(bot):
 async def start(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
     foydalanuvchi_id = update.message.from_user.id
+    logger.info(f"Start komandasi: sohbet_id={sohbet_id}, foydalanuvchi_id={foydalanuvchi_id}")
 
     if update.message.chat.type in ["group", "supergroup"]:
         admins = await context.bot.get_chat_administrators(sohbet_id)
@@ -60,6 +66,10 @@ async def start(update: Update, context: CallbackContext) -> None:
     quiz_dosyalarini_yukle()
     if not any(quiz_katalogu[bolum] for bolum in quiz_katalogu):
         await update.message.reply_text("Hata! Hech qanday test fayli topilmadi.")
+        return
+
+    if sohbet_id in kullanici_verileri:
+        await update.message.reply_text("Bu guruhda allaqachon test jarayoni davom etmoqda. /stop bilan to‘xtating yoki /restart bilan qayta boshlang.")
         return
 
     if context.args and len(context.args) > 0 and context.args[0].startswith("quiz_"):
@@ -75,6 +85,7 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 async def quiz_listesi(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
+    logger.info(f"Quizlist komandasi: sohbet_id={sohbet_id}")
     await bolumleri_goster(update, context, sohbet_id)
 
 async def bolumleri_goster(update: Update, context: CallbackContext, sohbet_id: int) -> None:
@@ -135,6 +146,7 @@ async def dugme_yonetici(update: Update, context: CallbackContext) -> None:
 
     sohbet_id = sorgu.message.chat_id
     veri = sorgu.data
+    logger.info(f"Dugme bosildi: sohbet_id={sohbet_id}, veri={veri}")
 
     if veri.startswith("bolum_"):
         bolum = veri.split("_")[1]
@@ -158,8 +170,9 @@ async def dugme_yonetici(update: Update, context: CallbackContext) -> None:
 
 async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.effective_chat.id
+    logger.info(f"Restart komandasi: sohbet_id={sohbet_id}")
     if sohbet_id not in kullanici_verileri:
-        await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q. Testni boshlash uchun test tanlang.")
+        await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q. Testni boshlash uchun /start ishlatiling.")
         return
 
     bolum = kullanici_verileri[sohbet_id]["bolum"]
@@ -173,8 +186,9 @@ async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
 
 async def durdur(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.effective_chat.id
+    logger.info(f"Stop komandasi: sohbet_id={sohbet_id}")
     if sohbet_id not in kullanici_verileri:
-        await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q. Testni boshlash uchun test tanlang.")
+        await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q.")
         return
 
     await quiz_bitir(update, context, sohbet_id)
@@ -183,15 +197,18 @@ async def durdur(update: Update, context: CallbackContext) -> None:
 async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, bolum: str, quiz_idx: int, baslangic_idx: int, bitis_idx: int) -> None:
     if bolum not in quiz_katalogu or quiz_idx >= len(quiz_katalogu[bolum]):
         await context.bot.send_message(sohbet_id, "Hata! Tanlangan test topilmadi.")
+        logger.error(f"Quiz yuklashda xato: bolum={bolum}, quiz_idx={quiz_idx}")
         return
 
     quiz_verileri = quiz_katalogu[bolum][quiz_idx]
     toplam_soru = len(quiz_verileri["questions"])
     if baslangic_idx >= toplam_soru or bitis_idx > toplam_soru or baslangic_idx >= bitis_idx:
         await context.bot.send_message(sohbet_id, "Hata! Noto‘g‘ri oralik tanlandi.")
+        logger.error(f"Noto‘g‘ri oralik: baslangic_idx={baslangic_idx}, bitis_idx={bitis_idx}, toplam_soru={toplam_soru}")
         return
 
     await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi boshlanmoqda! ({baslangic_idx + 1}-{bitis_idx} savollar)")
+    logger.info(f"Test boshlandi: sohbet_id={sohbet_id}, bolum={bolum}, quiz_idx={quiz_idx}")
 
     sorular = quiz_verileri["questions"][baslangic_idx:bitis_idx].copy()
     random.shuffle(sorular)
@@ -205,55 +222,66 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         "mevcut_soru": 0,
         "anket_mesajlari": {},
         "dogru_secenek_idleri": {},
-        "son_zamanlayici_metin": "",
         "foydalanuvchilar": {},
         "mevcut_bolum_testlari": quiz_katalogu[bolum],
-        "mevcut_test_idx": quiz_idx
+        "mevcut_test_idx": quiz_idx,
+        "is_running": True  # Test jarayoni davom etayotganini ko‘rsatadi
     }
 
-    await sonraki_soruyu_gonder(update, context, sohbet_id)
+    asyncio.create_task(sonraki_soruyu_gonder(update, context, sohbet_id))  # Testni alohida vazifa sifatida ishga tushiramiz
 
 async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet_id: int) -> None:
-    if sohbet_id not in kullanici_verileri:
+    if sohbet_id not in kullanici_verileri or not kullanici_verileri[sohbet_id].get("is_running", False):
+        logger.warning(f"Test jarayoni to‘xtatilgan yoki topilmadi: sohbet_id={sohbet_id}")
         return
 
     veri = kullanici_verileri[sohbet_id]
     if veri["mevcut_soru"] < len(veri["questions"]):
         soru = veri["questions"][veri["mevcut_soru"]]
         bekleme_suresi = soru.get("time", 10)
+        logger.info(f"Yangi savol: sohbet_id={sohbet_id}, soru_idx={veri['mevcut_soru']}, vaqt={bekleme_suresi}")
 
         secenekler = soru["answers"].copy()
         dogru_cevap = soru["correct_answer"]
         random.shuffle(secenekler)
         yeni_dogru_secenek_id = secenekler.index(soru["answers"][dogru_cevap])
 
-        anket_mesaji = await context.bot.send_poll(
-            chat_id=sohbet_id,
-            question=soru["question"],
-            options=secenekler,
-            type=Poll.QUIZ,
-            correct_option_id=yeni_dogru_secenek_id,
-            is_anonymous=False,
-            open_period=bekleme_suresi  # Poll vaqt chegarasi
-        )
-        veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
-        veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
-        veri["baslangic_vaqti"] = datetime.now()
+        try:
+            anket_mesaji = await context.bot.send_poll(
+                chat_id=sohbet_id,
+                question=soru["question"],
+                options=secenekler,
+                type=Poll.QUIZ,
+                correct_option_id=yeni_dogru_secenek_id,
+                is_anonymous=False,
+                open_period=bekleme_suresi
+            )
+            veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
+            veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
+            veri["baslangic_vaqti"] = datetime.now()
+        except Exception as e:
+            logger.error(f"Anket yuborishda xato: sohbet_id={sohbet_id}, xato={e}")
+            return
 
-        # Vaqt tugashini kutamiz
         await asyncio.sleep(bekleme_suresi)
-        veri["mevcut_soru"] += 1
-        await sonraki_soruyu_gonder(update, context, sohbet_id)
+        if sohbet_id in kullanici_verileri and veri["is_running"]:  # Test hali davom etayotganini tekshiramiz
+            veri["mevcut_soru"] += 1
+            await sonraki_soruyu_gonder(update, context, sohbet_id)
     else:
         await keyingi_testga_otish(update, context, sohbet_id)
 
 async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_id: int):
+    if sohbet_id not in kullanici_verileri or not kullanici_verileri[sohbet_id].get("is_running", False):
+        logger.warning(f"Keyingi testga o‘tishda ma'lumot topilmadi: sohbet_id={sohbet_id}")
+        return
+
     veri = kullanici_verileri[sohbet_id]
     veri["mevcut_test_idx"] += 1
 
     if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
         yeni_quiz = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
         await context.bot.send_message(sohbet_id, f"📌 {yeni_quiz['name']} testi boshlanmoqda!")
+        logger.info(f"Keyingi test: sohbet_id={sohbet_id}, test_idx={veri['mevcut_test_idx']}")
         sorular = yeni_quiz["questions"].copy()
         random.shuffle(sorular)
         veri["questions"] = sorular
@@ -267,17 +295,26 @@ async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_
 
 async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
     if sohbet_id not in kullanici_verileri:
+        logger.warning(f"Quiz bitirishda ma'lumot topilmadi: sohbet_id={sohbet_id}")
         return
 
     veri = kullanici_verileri[sohbet_id]
+    veri["is_running"] = False  # Test jarayonini to‘xtatamiz
     natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Natijalar:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
-    for i, (foydalanuvchi_id, info) in enumerate(reyting, 1):
-        foydalanuvchi = await context.bot.get_chat_member(sohbet_id, foydalanuvchi_id)
-        natija += f"{i}. {foydalanuvchi.user.first_name}: {info['skor']} ball (O‘rtacha tezlik: {info['umumiy_tezlik']:.2f} soniya)\n"
+    if not reyting:
+        natija += "Hech kim ishtirok etmadi."
+    else:
+        for i, (foydalanuvchi_id, info) in enumerate(reyting, 1):
+            try:
+                foydalanuvchi = await context.bot.get_chat_member(sohbet_id, foydalanuvchi_id)
+                natija += f"{i}. {foydalanuvchi.user.first_name}: {info['skor']} ball (O‘rtacha tezlik: {info['umumiy_tezlik']:.2f} soniya)\n"
+            except Exception as e:
+                logger.error(f"Foydalanuvchi ma'lumotini olishda xato: foydalanuvchi_id={foydalanuvchi_id}, xato={e}")
 
     await context.bot.send_message(sohbet_id, natija)
+    logger.info(f"Test yakunlandi: sohbet_id={sohbet_id}, natija yuborildi")
     await gorevleri_temizle(sohbet_id)
     del kullanici_verileri[sohbet_id]
 
@@ -293,10 +330,12 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
             break
 
     if sohbet_id is None:
+        logger.warning(f"Anket javobi uchun sohbet_id topilmadi: anket_id={anket_id}")
         return
 
     veri = kullanici_verileri[sohbet_id]
     if anket_id not in veri["anket_mesajlari"]:
+        logger.warning(f"Anket ID topilmadi: sohbet_id={sohbet_id}, anket_id={anket_id}")
         return
 
     if "foydalanuvchilar" not in veri:
@@ -313,9 +352,11 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
         foydalanuvchi["skor"] += 1
     foydalanuvchi["umumiy_tezlik"] = ((foydalanuvchi["umumiy_tezlik"] * foydalanuvchi["javoblar_soni"]) + vaqt_farqi) / (foydalanuvchi["javoblar_soni"] + 1)
     foydalanuvchi["javoblar_soni"] += 1
+    logger.info(f"Javob qabul qilindi: sohbet_id={sohbet_id}, foydalanuvchi_id={foydalanuvchi_id}, skor={foydalanuvchi['skor']}")
 
 async def reyting(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
+    logger.info(f"Ranking komandasi: sohbet_id={sohbet_id}")
     if sohbet_id not in kullanici_verileri:
         await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q.")
         return
@@ -324,23 +365,23 @@ async def reyting(update: Update, context: CallbackContext) -> None:
     natija = "Joriy reyting:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
-    for i, (foydalanuvchi_id, info) in enumerate(reyting, 1):
-        foydalanuvchi = await context.bot.get_chat_member(sohbet_id, foydalanuvchi_id)
-        natija += f"{i}. {foydalanuvchi.user.first_name}: {info['skor']} ball (O‘rtacha tezlik: {info['umumiy_tezlik']:.2f} soniya)\n"
+    if not reyting:
+        natija += "Hozircha hech kim ishtirok etmadi."
+    else:
+        for i, (foydalanuvchi_id, info) in enumerate(reyting, 1):
+            try:
+                foydalanuvchi = await context.bot.get_chat_member(sohbet_id, foydalanuvchi_id)
+                natija += f"{i}. {foydalanuvchi.user.first_name}: {info['skor']} ball (O‘rtacha tezlik: {info['umumiy_tezlik']:.2f} soniya)\n"
+            except Exception as e:
+                logger.error(f"Reytingda xato: foydalanuvchi_id={foydalanuvchi_id}, xato={e}")
 
     await context.bot.send_message(sohbet_id, natija)
 
 async def gorevleri_temizle(sohbet_id):
     if sohbet_id in kullanici_verileri:
         veri = kullanici_verileri[sohbet_id]
-        # Faqat agar "mevcut_gorev" mavjud bo‘lsa va tugamagan bo‘lsa
-        if "mevcut_gorev" in veri and not veri["mevcut_gorev"].done():
-            veri["mevcut_gorev"].cancel()
-            try:
-                await veri["mevcut_gorev"]
-            except asyncio.CancelledError:
-                pass
-        # "zamanlayici_gorev" ni olib tashladik, chunki endi foydalanilmaydi
+        veri["is_running"] = False  # Test jarayonini to‘xtatamiz
+        logger.info(f"Gorevler tozalandi: sohbet_id={sohbet_id}")
 
 def main():
     uygulama = Application.builder().token(TOKEN).build()
@@ -371,6 +412,7 @@ def main():
     signal.signal(signal.SIGTERM, sinyal_yonetici)
 
     print("Bot ishga tushdi! 🚀")
+    logger.info("Bot ishga tushdi!")
     uygulama.run_polling()
 
 if __name__ == "__main__":
