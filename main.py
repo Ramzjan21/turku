@@ -9,7 +9,7 @@ import atexit
 from datetime import datetime
 
 TOKEN = os.getenv("BOT_TOKEN", "7061995193:AAFMOJNR39xJdMqwDBTqShPa_ayXRfwDyzk")
-kullanici_verileri = {}  # {guruh_id: {foydalanuvchi_id: {skor, vaqt, ...}}}
+kullanici_verileri = {}  # {guruh_id: {...}}
 quiz_katalogu = {"A1": [], "A2": [], "B1": [], "B2": []}
 
 def quiz_dosyalarini_yukle(dizin="quizzes"):
@@ -162,11 +162,10 @@ async def yeniden_baslat(update: Update, context: CallbackContext) -> None:
         await context.bot.send_message(sohbet_id, "Hozirda faol test yo‘q. Testni boshlash uchun test tanlang.")
         return
 
-    ilk_foydalanuvchi = list(kullanici_verileri[sohbet_id].values())[0]
-    bolum = ilk_foydalanuvchi["bolum"]
-    quiz_idx = ilk_foydalanuvchi["quiz_idx"]
-    baslangic_idx = ilk_foydalanuvchi["start_idx"]
-    bitis_idx = ilk_foydalanuvchi["end_idx"]
+    bolum = kullanici_verileri[sohbet_id]["bolum"]
+    quiz_idx = kullanici_verileri[sohbet_id]["quiz_idx"]
+    baslangic_idx = kullanici_verileri[sohbet_id]["start_idx"]
+    bitis_idx = kullanici_verileri[sohbet_id]["end_idx"]
     await gorevleri_temizle(sohbet_id)
     del kullanici_verileri[sohbet_id]
     await quiz_gonder(update, context, sohbet_id, bolum, quiz_idx, baslangic_idx, bitis_idx)
@@ -207,7 +206,9 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         "anket_mesajlari": {},
         "dogru_secenek_idleri": {},
         "son_zamanlayici_metin": "",
-        "foydalanuvchilar": {}
+        "foydalanuvchilar": {},
+        "mevcut_bolum_testlari": quiz_katalogu[bolum],
+        "mevcut_test_idx": quiz_idx
     }
 
     await sonraki_soruyu_gonder(update, context, sohbet_id)
@@ -245,7 +246,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
         veri["mevcut_gorev"] = asyncio.create_task(soru_atlama(update, context, sohbet_id, bekleme_suresi))
         veri["zamanlayici_gorev"] = asyncio.create_task(zamanlayiciyi_guncelle(update, context, sohbet_id, zamanlayici_mesaji.message_id, bekleme_suresi))
     else:
-        await quiz_bitir(update, context, sohbet_id)
+        await keyingi_testga_otish(update, context, sohbet_id)
 
 async def zamanlayiciyi_guncelle(update: Update, context: CallbackContext, sohbet_id: int, mesaj_id: int, bekleme_suresi: int):
     try:
@@ -277,19 +278,39 @@ async def soru_atlama(update: Update, context: CallbackContext, sohbet_id: int, 
             await sonraki_soruyu_gonder(update, context, sohbet_id)
     except asyncio.CancelledError:
         pass
+    except Exception as hata:
+        print(f"Soru atlamada xato: {hata}")
+
+async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_id: int):
+    veri = kullanici_verileri.get(sohbet_id)
+    if not veri:
+        return
+
+    veri["mevcut_test_idx"] += 1
+    if veri["mevcut_test_idx"] < len(veri["mevcut_bolum_testlari"]):
+        quiz_verileri = veri["mevcut_bolum_testlari"][veri["mevcut_test_idx"]]
+        sorular = quiz_verileri["questions"].copy()
+        random.shuffle(sorular)
+
+        veri["questions"] = sorular
+        veri["mevcut_soru"] = 0
+        veri["quiz_idx"] = veri["mevcut_test_idx"]
+        await context.bot.send_message(sohbet_id, f"📌 {quiz_verileri['name']} testi boshlanmoqda!")
+        await sonraki_soruyu_gonder(update, context, sohbet_id)
+    else:
+        await quiz_bitir(update, context, sohbet_id)
 
 async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
     if sohbet_id not in kullanici_verileri:
         return
 
     veri = kullanici_verileri[sohbet_id]
-    toplam_soru = len(veri["questions"])
-    natija = "Test yakunlandi! Reyting:\n"
+    natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Reyting:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
     for i, (foydalanuvchi_id, info) in enumerate(reyting, 1):
         foydalanuvchi = await context.bot.get_chat_member(sohbet_id, foydalanuvchi_id)
-        natija += f"{i}. {foydalanuvchi.user.first_name}: {info['skor']}/{toplam_soru} (O‘rtacha tezlik: {info['umumiy_tezlik']:.2f} soniya)\n"
+        natija += f"{i}. {foydalanuvchi.user.first_name}: {info['skor']} ball (O‘rtacha tezlik: {info['umumiy_tezlik']:.2f} soniya)\n"
 
     await context.bot.send_message(sohbet_id, natija)
     await gorevleri_temizle(sohbet_id)
@@ -313,18 +334,16 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
     if anket_id not in veri["anket_mesajlari"]:
         return
 
-    if "foydalanuvchilar" not in veri:
-        veri["foydalanuvchilar"] = {}
-
     if foydalanuvchi_id not in veri["foydalanuvchilar"]:
         veri["foydalanuvchilar"][foydalanuvchi_id] = {"skor": 0, "umumiy_tezlik": 0, "javoblar_soni": 0}
 
-    dogru_secenek_id = veri["dogru_secenek_idleri"][anket_id]
     foydalanuvchi = veri["foydalanuvchilar"][foydalanuvchi_id]
     vaqt_farqi = (datetime.now() - veri["baslangic_vaqti"]).total_seconds()
+    dogru_secenek_id = veri["dogru_secenek_idleri"][anket_id]
 
     if cevap == dogru_secenek_id:
         foydalanuvchi["skor"] += 1
+
     foydalanuvchi["umumiy_tezlik"] = ((foydalanuvchi["umumiy_tezlik"] * foydalanuvchi["javoblar_soni"]) + vaqt_farqi) / (foydalanuvchi["javoblar_soni"] + 1)
     foydalanuvchi["javoblar_soni"] += 1
 
