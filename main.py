@@ -47,7 +47,7 @@ async def bot_komutlarini_ayarla(bot):
         BotCommand("start", "Testni boshlash"),
         BotCommand("restart", "Testni qayta boshlash"),
         BotCommand("stop", "Testni to‘xtatish"),
-        BotCommand("quizlist", "Testlar ro‘yxati"),
+        BotCommand("quizlist", "TestLAR ro‘yxati"),
         BotCommand("ranking", "Reytingni ko‘rish")
     ]
     await bot.set_my_commands(komutlar)
@@ -263,7 +263,8 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
             logger.error(f"Anket yuborishda xato: sohbet_id={sohbet_id}, xato={e}")
             return
     else:
-        await keyingi_testga_otish(update, context, sohbet_id)
+        # 20 talik savollar tugagach, testni to'xtatib natija chiqaramiz
+        await quiz_bitir(update, context, sohbet_id)
 
 async def keyingi_testga_otish(update: Update, context: CallbackContext, sohbet_id: int):
     if sohbet_id not in kullanici_verileri or not kullanici_verileri[sohbet_id].get("is_running", False):
@@ -295,7 +296,7 @@ async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
 
     veri = kullanici_verileri[sohbet_id]
     veri["is_running"] = False  # Test jarayonini to'xtatamiz
-    natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Natijalar:\n"
+    natija = f"{veri['bolum']} bo‘limi ({veri['start_idx'] + 1}-{veri['end_idx']}) testlari yakunlandi! Natijalar:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
     if not reyting:
@@ -416,4 +417,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
