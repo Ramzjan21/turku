@@ -225,10 +225,10 @@ async def quiz_gonder(update: Update, context: CallbackContext, sohbet_id: int, 
         "foydalanuvchilar": {},
         "mevcut_bolum_testlari": quiz_katalogu[bolum],
         "mevcut_test_idx": quiz_idx,
-        "is_running": True  # Test jarayoni davom etayotganini ko‘rsatadi
+        "is_running": True
     }
 
-    asyncio.create_task(sonraki_soruyu_gonder(update, context, sohbet_id))  # Testni alohida vazifa sifatida ishga tushiramiz
+    await sonraki_soruyu_gonder(update, context, sohbet_id)
 
 async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet_id: int) -> None:
     if sohbet_id not in kullanici_verileri or not kullanici_verileri[sohbet_id].get("is_running", False):
@@ -238,7 +238,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
     veri = kullanici_verileri[sohbet_id]
     if veri["mevcut_soru"] < len(veri["questions"]):
         soru = veri["questions"][veri["mevcut_soru"]]
-        bekleme_suresi = soru.get("time", 10)
+        bekleme_suresi = soru.get("time", 10)  # Vaqt faqat ko'rinish uchun
         logger.info(f"Yangi savol: sohbet_id={sohbet_id}, soru_idx={veri['mevcut_soru']}, vaqt={bekleme_suresi}")
 
         secenekler = soru["answers"].copy()
@@ -254,7 +254,7 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
                 type=Poll.QUIZ,
                 correct_option_id=yeni_dogru_secenek_id,
                 is_anonymous=False,
-                open_period=bekleme_suresi
+                open_period=bekleme_suresi  # Vaqt faqat ko'rinish uchun
             )
             veri["anket_mesajlari"][anket_mesaji.poll.id] = veri["mevcut_soru"]
             veri["dogru_secenek_idleri"][anket_mesaji.poll.id] = yeni_dogru_secenek_id
@@ -262,11 +262,6 @@ async def sonraki_soruyu_gonder(update: Update, context: CallbackContext, sohbet
         except Exception as e:
             logger.error(f"Anket yuborishda xato: sohbet_id={sohbet_id}, xato={e}")
             return
-
-        await asyncio.sleep(bekleme_suresi)
-        if sohbet_id in kullanici_verileri and veri["is_running"]:  # Test hali davom etayotganini tekshiramiz
-            veri["mevcut_soru"] += 1
-            await sonraki_soruyu_gonder(update, context, sohbet_id)
     else:
         await keyingi_testga_otish(update, context, sohbet_id)
 
@@ -299,7 +294,7 @@ async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
         return
 
     veri = kullanici_verileri[sohbet_id]
-    veri["is_running"] = False  # Test jarayonini to‘xtatamiz
+    veri["is_running"] = False CST Test jarayonini to‘xtatamiz
     natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Natijalar:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
@@ -353,6 +348,10 @@ async def anket_cevap_yonetici(update: Update, context: CallbackContext) -> None
     foydalanuvchi["umumiy_tezlik"] = ((foydalanuvchi["umumiy_tezlik"] * foydalanuvchi["javoblar_soni"]) + vaqt_farqi) / (foydalanuvchi["javoblar_soni"] + 1)
     foydalanuvchi["javoblar_soni"] += 1
     logger.info(f"Javob qabul qilindi: sohbet_id={sohbet_id}, foydalanuvchi_id={foydalanuvchi_id}, skor={foydalanuvchi['skor']}")
+
+    # Keyingi savolga o'tamiz
+    veri["mevcut_soru"] += 1
+    await sonraki_soruyu_gonder(update, context, sohbet_id)
 
 async def reyting(update: Update, context: CallbackContext) -> None:
     sohbet_id = update.message.chat_id
