@@ -294,7 +294,7 @@ async def quiz_bitir(update: Update, context: CallbackContext, sohbet_id: int):
         return
 
     veri = kullanici_verileri[sohbet_id]
-    veri["is_running"] = False CST Test jarayonini to‘xtatamiz
+    veri["is_running"] = False  Test jarayonini to‘xtatamiz
     natija = f"{veri['bolum']} bo‘limi testlari yakunlandi! Natijalar:\n"
     reyting = sorted(veri["foydalanuvchilar"].items(), key=lambda x: (x[1]["skor"], -x[1]["umumiy_tezlik"]), reverse=True)
 
