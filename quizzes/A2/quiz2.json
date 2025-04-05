@@ -1,122 +1,677 @@
 {
-  "quizzes": [
+  "name": "Unit 2",
+  "questions": [
     {
-      "name": "Unit ",
-      "questions": [
-        {"question": "basrol nima?", "answers": ["bosh rol", "ikkinchi rol", "yordamchi", "rejissyor"], "correct_answer": 0, "time": 10},
-        {"question": "belgesel nima?", "answers": ["komediya", "hujjatli film", "triller", "fantastika"], "correct_answer": 1, "time": 10},
-        {"question": "beslenme nima?", "answers": ["uyqu", "oziqlanish", "sport", "o‘qish"], "correct_answer": 1, "time": 10},
-        {"question": "beyaz nima?", "answers": ["qora", "oq", "sariq", "qizil"], "correct_answer": 1, "time": 10},
-        {"question": "bilgin nima?", "answers": ["shoir", "olim", "siyosatchi", "o‘qituvchi"], "correct_answer": 1, "time": 10},
-        {"question": "bolca nima?", "answers": ["kam", "mo‘l", "oz", "hech qancha"], "correct_answer": 1, "time": 10},
-        {"question": "bordo nima?", "answers": ["yashil", "to‘q qizil", "ko‘k", "sariq"], "correct_answer": 1, "time": 10},
-        {"question": "bulus nima?", "answers": ["xato", "kashfiyot", "hikoya", "sodda"], "correct_answer": 1, "time": 10},
-        {"question": "cömert nima?", "answers": ["xasis", "saxiy", "qiziquvchan", "bilimdon"], "correct_answer": 1, "time": 10},
-        {"question": "çavdar nima?", "answers": ["bug‘doy", "javdar", "guruch", "mosh"], "correct_answer": 1, "time": 10},
-        {"question": "çocuk nima?", "answers": ["katta", "bola", "qariya", "ayol"], "correct_answer": 1, "time": 10},
-        {"question": "çizgi film nima?", "answers": ["multfilm", "serial", "triller", "hujjatli"], "correct_answer": 0, "time": 10},
-        {"question": "demokrasi nima?", "answers": ["monarxiya", "demokratiya", "diktatura", "anarxiya"], "correct_answer": 1, "time": 10},
-        {"question": "deney nima?", "answers": ["o‘yin", "tajriba", "hikoya", "reja"], "correct_answer": 1, "time": 10},
-        {"question": "derbi nima?", "answers": ["sport uchrashuvi", "bayram", "konsert", "teatr"], "correct_answer": 0, "time": 10},
-        {"question": "dram nima?", "answers": ["komediya", "drama", "fantastika", "hujjatli"], "correct_answer": 1, "time": 10},
-        {"question": "egzersiz nima?", "answers": ["jismoniy mashqlar", "dam olish", "o‘qish", "uxlash"], "correct_answer": 0, "time": 10},
-        {"question": "ekonomi nima?", "answers": ["matematika", "iqtisodiyot", "fizika", "kimyo"], "correct_answer": 1, "time": 10},
-        {"question": "emekli nima?", "answers": ["ishchi", "nafagaxo‘r", "talaba", "o‘qituvchi"], "correct_answer": 1, "time": 10},
-        {"question": "esnek nima?", "answers": ["qattiq", "o‘zgaruvchan", "sovuq", "issiq"], "correct_answer": 1, "time": 10},
-        {"question": "fare nima?", "answers": ["mushuk", "sichqon", "it", "qush"], "correct_answer": 1, "time": 10},
-        {"question": "firsatçi nima?", "answers": ["fursatchi", "ishonchli", "sodda", "mehribon"], "correct_answer": 0, "time": 10},
-        {"question": "gazetecilik nima?", "answers": ["siyosat", "jurnalistika", "tibbiyot", "san’at"], "correct_answer": 1, "time": 10},
-        {"question": "gece nima?", "answers": ["kunduz", "kecha", "ertalab", "kechqurun"], "correct_answer": 1, "time": 10},
-        {"question": "gerilim nima?", "answers": ["triller", "komediya", "romantik", "hujjatli"], "correct_answer": 0, "time": 10},
-        {"question": "gündüz nima?", "answers": ["kecha", "kunduz", "tush", "ton"], "correct_answer": 1, "time": 10},
-        {"question": "hayalci nima?", "answers": ["realist", "xayolparast", "ishchi", "o‘qituvchi"], "correct_answer": 1, "time": 10},
-        {"question": "hirsiz nima?", "answers": ["sodda", "o‘g‘ri", "do‘st", "qahramon"], "correct_answer": 1, "time": 10},
-        {"question": "hizmetçi nima?", "answers": ["xizmatkor", "hukmdor", "o‘qituvchi", "sotuvchi"], "correct_answer": 0, "time": 10},
-        {"question": "hükümdar nima?", "answers": ["xizmatkor", "hukmdor", "ishchi", "talaba"], "correct_answer": 1, "time": 10},
-        {"question": "idareci nima?", "answers": ["ma’mur", "o‘quvchi", "sotuvchi", "shoir"], "correct_answer": 0, "time": 10},
-        {"question": "ihtiyaç nima?", "answers": ["xohish", "ehtiyoj", "ortiqcha", "zararsiz"], "correct_answer": 1, "time": 10},
-        {"question": "iletisim nima?", "answers": ["aloqa", "masofa", "tinchlik", "xavf"], "correct_answer": 0, "time": 10},
-        {"question": "ilginç nima?", "answers": ["oddiy", "qiziqarli", "zerikarli", "sodda"], "correct_answer": 1, "time": 10},
-        {"question": "ilk nima?", "answers": ["oxirgi", "birinchi", "o‘rta", "keyingi"], "correct_answer": 1, "time": 10},
-        {"question": "kahkaha nima?", "answers": ["kulgi", "yig‘i", "sukut", "gap"], "correct_answer": 0, "time": 10},
-        {"question": "kahraman nima?", "answers": ["qahramon", "qochqin", "dushman", "oddiy"], "correct_answer": 0, "time": 10},
-        {"question": "kalsiyum nima?", "answers": ["temir", "kalsiy", "oltin", "kumush"], "correct_answer": 1, "time": 10},
-        {"question": "kampanya nima?", "answers": ["bayram", "kampaniya", "uylanish", "sayohat"], "correct_answer": 1, "time": 10},
-        {"question": "kanat nima?", "answers": ["oyoq", "qanot", "bosh", "qo‘l"], "correct_answer": 1, "time": 10},
-        {"question": "kaplumbaga nima?", "answers": ["quyon", "toshbaqa", "sichqon", "qush"], "correct_answer": 1, "time": 10},
-        {"question": "kemik nima?", "answers": ["suyak", "ter", "go‘sht", "soch"], "correct_answer": 0, "time": 10},
-        {"question": "kepek nima?", "answers": ["tuz", "kepak", "shakar", "yog‘"], "correct_answer": 1, "time": 10},
-        {"question": "karmizi nima?", "answers": ["qizil", "yashil", "ko‘k", "sariq"], "correct_answer": 0, "time": 10},
-        {"question": "kolesterol nima?", "answers": ["vitamin", "xolesterin", "shakar", "kalsiy"], "correct_answer": 1, "time": 10},
-        {"question": "komutan nima?", "answers": ["qo‘mondon", "askar", "shifokor", "o‘qituvchi"], "correct_answer": 0, "time": 10},
-        {"question": "konforlu nima?", "answers": ["noqulay", "qulay", "qattiq", "sovuq"], "correct_answer": 1, "time": 10},
-        {"question": "kongre nima?", "answers": ["kongress", "bayram", "teatr", "sport"], "correct_answer": 0, "time": 10},
-        {"question": "koyun nima?", "answers": ["echki", "qo‘y", "sigir", "ot"], "correct_answer": 1, "time": 10},
-        {"question": "kristal nima?", "answers": ["tosh", "kristall", "shisha", "plastik"], "correct_answer": 1, "time": 10},
-        {"question": "kurnaz nima?", "answers": ["sodda", "ayyor", "mehribon", "bilimdon"], "correct_answer": 1, "time": 10},
-        {"question": "kuruyemis nima?", "answers": ["quruq mevalar", "go‘sht", "sabzavot", "suv"], "correct_answer": 0, "time": 10},
-        {"question": "kültür nima?", "answers": ["tabiat", "madaniyat", "sport", "texnologiya"], "correct_answer": 1, "time": 10},
-        {"question": "lacivert nima?", "answers": ["sariq", "lojuvard", "qizil", "yashil"], "correct_answer": 1, "time": 10},
-        {"question": "magazin nima?", "answers": ["do‘kon", "jurnal", "uy", "maktab"], "correct_answer": 1, "time": 10},
-        {"question": "magaza nima?", "answers": ["do‘kon", "maktab", "bog‘", "teatr"], "correct_answer": 0, "time": 10},
-        {"question": "meshur nima?", "answers": ["oddiy", "mashhur", "noma’lum", "qashshoq"], "correct_answer": 1, "time": 10},
-        {"question": "mesgul nima?", "answers": ["bo‘sh", "band", "dam olgan", "uxlagan"], "correct_answer": 1, "time": 10},
-        {"question": "metre nima?", "answers": ["santimetr", "metr", "kilometr", "millimetr"], "correct_answer": 1, "time": 10},
-        {"question": "mineral nima?", "answers": ["vitamin", "mineral", "shakar", "oqsil"], "correct_answer": 1, "time": 10},
-        {"question": "mizaç nima?", "answers": ["xulq", "mijoz", "kasb", "daromad"], "correct_answer": 0, "time": 10},
-        {"question": "mucit nima?", "answers": ["o‘qituvchi", "ixtirochi", "sotuvchi", "shoir"], "correct_answer": 1, "time": 10},
-        {"question": "muhtesem nima?", "answers": ["oddiy", "muhtasham", "zerikarli", "sodda"], "correct_answer": 1, "time": 10},
-        {"question": "müdür nima?", "answers": ["o‘quvchi", "mudir", "ishchi", "xizmatkor"], "correct_answer": 1, "time": 10},
-        {"question": "okyanus nima?", "answers": ["daryo", "okean", "ko‘l", "hovuz"], "correct_answer": 1, "time": 10},
-        {"question": "ödül nima?", "answers": ["jazo", "mukofot", "xato", "ish"], "correct_answer": 1, "time": 10},
-        {"question": "pano nima?", "answers": ["panel", "devor", "deraza", "eshik"], "correct_answer": 0, "time": 10},
-        {"question": "politika nima?", "answers": ["siyosat", "san’at", "sport", "tibbiyot"], "correct_answer": 0, "time": 10},
-        {"question": "porsiyon nima?", "answers": ["miqdor", "vaqt", "masofa", "og‘irlik"], "correct_answer": 0, "time": 10},
-        {"question": "protein nima?", "answers": ["oqsil", "shakar", "vitamin", "mineral"], "correct_answer": 0, "time": 10},
-        {"question": "puan nima?", "answers": ["pul", "ball", "vaqt", "masofa"], "correct_answer": 1, "time": 10},
-        {"question": "radyo dalgasi nima?", "answers": ["radio to‘lqin", "svet", "ovoz", "sham"], "correct_answer": 0, "time": 10},
-        {"question": "reçete nima?", "answers": ["retsept", "xat", "hikoya", "ruxsat"], "correct_answer": 0, "time": 10},
-        {"question": "romanci nima?", "answers": ["shoir", "roman yozuvchi", "jurnalist", "o‘qituvchi"], "correct_answer": 1, "time": 10},
-        {"question": "romantik nima?", "answers": ["romantik", "triller", "komediya", "hujjatli"], "correct_answer": 0, "time": 10},
-        {"question": "satis nima?", "answers": ["sotish", "xarid qilish", "yig‘ish", "saqlash"], "correct_answer": 0, "time": 10},
-        {"question": "sene nima?", "answers": ["oy", "yil", "hafta", "kun"], "correct_answer": 1, "time": 10},
-        {"question": "siradan nima?", "answers": ["oddiy", "ajoyib", "qiziqarli", "muhtasham"], "correct_answer": 0, "time": 10},
-        {"question": "sinyal nima?", "answers": ["signal", "ovoz", "rang", "yorug‘lik"], "correct_answer": 0, "time": 10},
-        {"question": "siyah nima?", "answers": ["qora", "oq", "qizil", "yashil"], "correct_answer": 0, "time": 10},
-        {"question": "takim nima?", "answers": ["jamoa", "shaxs", "uy", "do‘kon"], "correct_answer": 0, "time": 10},
-        {"question": "takma nima?", "answers": ["taxallus", "ism", "familiya", "kasb"], "correct_answer": 0, "time": 10},
-        {"question": "tavan nima?", "answers": ["shift", "pol", "devor", "deraza"], "correct_answer": 0, "time": 10},
-        {"question": "tavsan nima?", "answers": ["quyon", "sichqon", "mushuk", "it"], "correct_answer": 0, "time": 10},
-        {"question": "teleskop nima?", "answers": ["mikroskop", "teleskop", "durbin", "kamera"], "correct_answer": 1, "time": 10},
-        {"question": "toplanti nima?", "answers": ["bayram", "majlis", "sayohat", "sport"], "correct_answer": 1, "time": 10},
-        {"question": "tür nima?", "answers": ["tur", "ism", "rang", "hajm"], "correct_answer": 0, "time": 10},
-        {"question": "ünvan nima?", "answers": ["unvon", "manzil", "ism", "kasb"], "correct_answer": 0, "time": 10},
-        {"question": "usta nima?", "answers": ["shogird", "usta", "o‘quvchi", "sotuvchi"], "correct_answer": 1, "time": 10},
-        {"question": "vasita nima?", "answers": ["vosita", "maqsad", "xohish", "reja"], "correct_answer": 0, "time": 10},
-        {"question": "yazar nima?", "answers": ["o‘qituvchi", "yozuvchi", "sotuvchi", "shoir"], "correct_answer": 1, "time": 10},
-        {"question": "yolculuk nima?", "answers": ["sayohat", "ish", "dam olish", "uyqu"], "correct_answer": 0, "time": 10},
-        {"question": "yöresel nima?", "answers": ["umumiy", "mahalliy", "chet el", "zamonaviy"], "correct_answer": 1, "time": 10},
-        {"question": "zencefil nima?", "answers": ["zanjabil", "sarimsoq", "piyoz", "sabzi"], "correct_answer": 0, "time": 10},
-        {"question": "adim atmak nima?", "answers": ["qadam tashlamoq", "o‘tirmoq", "yotmoq", "yugurmoq"], "correct_answer": 0, "time": 10},
-        {"question": "affetmek nima?", "answers": ["ayblamoq", "kechirmoq", "jazolamoq", "xafa qilmoq"], "correct_answer": 1, "time": 10},
-        {"question": "atanmak nima?", "answers": ["tayinlanmoq", "chaqirmoq", "ketmoq", "ishlamoq"], "correct_answer": 0, "time": 10},
-        {"question": "bastirmak nima?", "answers": ["bostirmoq", "ko‘tarmoq", "yordam bermoq", "ochmoq"], "correct_answer": 0, "time": 10},
-        {"question": "basvurmak nima?", "answers": ["topshirmoq", "rad etmoq", "kutmoq", "boshlamoq"], "correct_answer": 0, "time": 10},
-        {"question": "dogmak nima?", "answers": ["o‘lmoq", "tug‘ilmoq", "ketmoq", "yashamoq"], "correct_answer": 1, "time": 10},
-        {"question": "düsürmek nima?", "answers": ["ko‘tarmoq", "tushirmoq", "yig‘moq", "sotmoq"], "correct_answer": 1, "time": 10},
-        {"question": "gönüllü olmak nima?", "answers": ["ko‘ngilli bo‘lmoq", "majbur bo‘lmoq", "rad etmoq", "kechikmoq"], "correct_answer": 0, "time": 10},
-        {"question": "ilerlemek nima?", "answers": ["orqaga qaytmoq", "ilgarilamoq", "to‘xtamoq", "kechikmoq"], "correct_answer": 1, "time": 10},
-        {"question": "incelemek nima?", "answers": ["tekshirmoq", "e’tiborsiz qoldirmoq", "yozmoq", "o‘qimoq"], "correct_answer": 0, "time": 10},
-        {"question": "katilmak nima?", "answers": ["ayrilmoq", "qo‘shilmoq", "kirmoq", "chiqmoq"], "correct_answer": 1, "time": 10},
-        {"question": "kazanmak nima?", "answers": ["yutqazmoq", "g‘alaba qozonmoq", "bermoq", "olmoq"], "correct_answer": 1, "time": 10},
-        {"question": "kesfetmek nima?", "answers": ["yashirmoq", "kashf qilmoq", "yo‘qotmoq", "sotmoq"], "correct_answer": 1, "time": 10},
-        {"question": "mezun olmak nima?", "answers": ["boshlamoq", "bitirmoq", "o‘qimoq", "ishlamoq"], "correct_answer": 1, "time": 10},
-        {"question": "tüketmek nima?", "answers": ["saqlamoq", "iste’mol qilmoq", "yig‘moq", "sotmoq"], "correct_answer": 1, "time": 10},
-        {"question": "ünlü olmak nima?", "answers": ["noma’lum bo‘lmoq", "mashhur bo‘lmoq", "yashirinmoq", "oddiy bo‘lmoq"], "correct_answer": 1, "time": 10},
-        {"question": "vazgeçmek nima?", "answers": ["davom etmoq", "voz kechmoq", "boshlamoq", "yordam bermoq"], "correct_answer": 1, "time": 10},
-        {"question": "yerlesmek nima?", "answers": ["ko‘chmoq", "joylashmoq", "ketmoq", "yugurmoq"], "correct_answer": 1, "time": 10},
-        {"question": "yayimlamak nima?", "answers": ["yashirmoq", "nashr qilmoq", "saqlamoq", "o‘chirmoq"], "correct_answer": 1, "time": 10}
-      ]
+      "question": "\"Başrol\" o‘zbekchada nima?",
+      "answers": ["bosh rol", "ikkinchi rol", "epizod", "rejissyor"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Belgesel\" o‘zbekchada nima?",
+      "answers": ["hujjatli (filmga nisbatan)", "multfilm", "drama", "triller"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Beslenme\" o‘zbekchada nima?",
+      "answers": ["oziqlanish, ovqatlanish", "uxlash", "sayr qilish", "ishlash"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Beyaz\" o‘zbekchada nima?",
+      "answers": ["oq", "qora", "qizil", "sariq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Bilgin\" o‘zbekchada nima?",
+      "answers": ["olim", "shifokor", "o‘qituvchi", "yozuvchi"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Bolca\" o‘zbekchada nima?",
+      "answers": ["mo‘l", "kam", "oz", "bo‘sh"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Bordo\" o‘zbekchada nima?",
+      "answers": ["to‘q qizil", "yashil", "ko‘k", "sariq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Bulus\" o‘zbekchada nima?",
+      "answers": ["kashfiyot", "tajriba", "sinov", "xato"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Cömert\" o‘zbekchada nima?",
+      "answers": ["saxiy", "hasis", "o‘jar", "quvnoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Çavdar\" o‘zbekchada nima?",
+      "answers": ["javdar", "bug‘doy", "guruch", "makkajo‘xori"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Çocuk çizgi film\" o‘zbekchada nima?",
+      "answers": ["multfilm", "hujjatli film", "drama", "triller"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Demokrasi\" o‘zbekchada nima?",
+      "answers": ["demokratiya", "monarxiya", "diktatura", "siyosat"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Deney\" o‘zbekchada nima?",
+      "answers": ["tajriba", "kashfiyot", "sinov", "natija"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Derbi\" o‘zbekchada nima?",
+      "answers": ["derbi (sport uchrashuvi)", "musobaqa", "o‘yin", "turnir"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Dram\" o‘zbekchada nima?",
+      "answers": ["drama (filmga nisbatan)", "multfilm", "triller", "komediya"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Egzersiz\" o‘zbekchada nima?",
+      "answers": ["jismoniy mashqlar", "o‘qish", "yozish", "sayohat"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Ekonomi\" o‘zbekchada nima?",
+      "answers": ["iqtisodiyot", "siyosat", "madaniyat", "sport"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Emekli\" o‘zbekchada nima?",
+      "answers": ["nafaqaxo‘r", "ishchi", "o‘qituvchi", "dehqon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Esnek\" o‘zbekchada nima?",
+      "answers": ["o‘zgaruvchan, egiluvchan", "qattiq", "mustahkam", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Fare\" o‘zbekchada nima?",
+      "answers": ["sichqon", "mushuk", "it", "quyon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Fırsatçı\" o‘zbekchada nima?",
+      "answers": ["fursatchi, fursatdan foydalanib qoladigan odam", "saxiy", "o‘jar", "quvnoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Gazetecilik\" o‘zbekchada nima?",
+      "answers": ["jurnalistika", "yozuvchilik", "o‘qituvchilik", "siyosat"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Gece\" o‘zbekchada nima?",
+      "answers": ["kecha", "kunduz", "erta", "kech"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Gerilim\" o‘zbekchada nima?",
+      "answers": ["triller (filmga nisbatan)", "drama", "komediya", "multfilm"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Gündüz\" o‘zbekchada nima?",
+      "answers": ["kunduz", "kecha", "tun", "erta"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Hayalci\" o‘zbekchada nima?",
+      "answers": ["xayolparast", "realist", "o‘jar", "quvnoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Hırsız\" o‘zbekchada nima?",
+      "answers": ["o‘g‘ri", "xizmatkor", "ma’mur", "qo‘mondon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Hizmetçi\" o‘zbekchada nima?",
+      "answers": ["xizmatkor", "o‘g‘ri", "hukmdor", "ma’mur"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Hükümdar\" o‘zbekchada nima?",
+      "answers": ["hukmdor", "xizmatkor", "ma’mur", "qo‘mondon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İdareci\" o‘zbekchada nima?",
+      "answers": ["ma’mur", "hukmdor", "xizmatkor", "qo‘mondon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İhtiyaç\" o‘zbekchada nima?",
+      "answers": ["ehtiyoj", "xohish", "taklif", "keraksizlik"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İletişim\" o‘zbekchada nima?",
+      "answers": ["aloqa", "sayohat", "siyosat", "madaniyat"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İlginç\" o‘zbekchada nima?",
+      "answers": ["qiziqarli", "oddiy", "zerikarli", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İlk\" o‘zbekchada nima?",
+      "answers": ["birinchi", "oxirgi", "o‘rta", "ikkinchi"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kahkaha\" o‘zbekchada nima?",
+      "answers": ["kulgi", "yig‘i", "sokinlik", "ovoz"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kahraman\" o‘zbekchada nima?",
+      "answers": ["qahramon", "o‘g‘ri", "xizmatkor", "ma’mur"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kalsiyum\" o‘zbekchada nima?",
+      "answers": ["kalsiy", "mineral", "oqsil", "xolesterin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kampanya\" o‘zbekchada nima?",
+      "answers": ["kampaniya", "musobaqa", "kongress", "majlis"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kanat\" o‘zbekchada nima?",
+      "answers": ["qanot", "suyak", "teri", "tomir"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kaplumbağa\" o‘zbekchada nima?",
+      "answers": ["toshbaqa", "sichqon", "quyon", "qush"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kemik\" o‘zbekchada nima?",
+      "answers": ["suyak", "tomir", "teri", "mushak"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kepek\" o‘zbekchada nima?",
+      "answers": ["kepak", "un", "guruch", "javdar"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kırmız\" o‘zbekchada nima?",
+      "answers": ["qizil", "oq", "ko‘k", "sariq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kolesterol\" o‘zbekchada nima?",
+      "answers": ["xolesterin", "oqsil", "kalsiy", "mineral"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Komutan\" o‘zbekchada nima?",
+      "answers": ["qo‘mondon", "ma’mur", "hukmdor", "xizmatkor"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Konforlu\" o‘zbekchada nima?",
+      "answers": ["qulay", "noqulay", "qattiq", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kongre\" o‘zbekchada nima?",
+      "answers": ["kongress", "majlis", "musobaqa", "kampaniya"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Koyun\" o‘zbekchada nima?",
+      "answers": ["qo‘y", "echki", "sigir", "ot"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kristal\" o‘zbekchada nima?",
+      "answers": ["kristall", "shisha", "metal", "plastik"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kurnaz\" o‘zbekchada nima?",
+      "answers": ["ayyor", "sodda", "saxiy", "quvnoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kuruyemiş\" o‘zbekchada nima?",
+      "answers": ["quruq yemishlar, quritilgan mevalar", "sabzavot", "go‘sht", "non"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kültür\" o‘zbekchada nima?",
+      "answers": ["madaniyat", "siyosat", "iqtisodiyot", "sport"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Lacivert\" o‘zbekchada nima?",
+      "answers": ["ko‘k, lojuvard", "qizil", "oq", "sariq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Magazin\" o‘zbekchada nima?",
+      "answers": ["jurnal", "do‘kon", "sayt", "prospekt"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Mağaza\" o‘zbekchada nima?",
+      "answers": ["do‘kon", "jurnal", "bufet", "restoran"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Meşhur\" o‘zbekchada nima?",
+      "answers": ["mashhur", "oddiy", "noma’lum", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Meşgul\" o‘zbekchada nima?",
+      "answers": ["band", "bo‘sh", "quvnoq", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Metre\" o‘zbekchada nima?",
+      "answers": ["metr", "kilogramm", "litr", "santimetr"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Mineral\" o‘zbekchada nima?",
+      "answers": ["mineral", "oqsil", "kalsiy", "xolesterin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Mizaç\" o‘zbekchada nima?",
+      "answers": ["mijoz", "xulq", "fe’l", "odam"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Mucit\" o‘zbekchada nima?",
+      "answers": ["ixtirochi", "olim", "yozuvchi", "shifokor"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Muhteşem\" o‘zbekchada nima?",
+      "answers": ["muhtasham", "oddiy", "kichik", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Müdür\" o‘zbekchada nima?",
+      "answers": ["mudir, direktor", "ma’mur", "qo‘mondon", "xizmatkor"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Okyanus\" o‘zbekchada nima?",
+      "answers": ["okean", "daryo", "ko‘l", "hovuz"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Ödül\" o‘zbekchada nima?",
+      "answers": ["mukofot", "jarima", "sovg‘a", "xarajat"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Pano\" o‘zbekchada nima?",
+      "answers": ["panel", "lavha", "plakat", "jurnal"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Politika\" o‘zbekchada nima?",
+      "answers": ["siyosat", "iqtisodiyot", "madaniyat", "sport"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Porsiyon\" o‘zbekchada nima?",
+      "answers": ["portsiya", "tilim", "dona", "bo‘lak"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Protein\" o‘zbekchada nima?",
+      "answers": ["oqsil", "kalsiy", "xolesterin", "mineral"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Puan\" o‘zbekchada nima?",
+      "answers": ["ball", "natija", "sinov", "xato"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Radyo dalgası\" o‘zbekchada nima?",
+      "answers": ["radio to‘lqin", "signal", "ovoz", "nur"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Reçete\" o‘zbekchada nima?",
+      "answers": ["retsept (dorilar yozilgan ro‘yxat)", "hisobot", "jurnal", "taklif"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Romancı\" o‘zbekchada nima?",
+      "answers": ["roman yozuvchi", "shoir", "jurnalist", "olim"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Romantik\" o‘zbekchada nima?",
+      "answers": ["romantik", "jiddiy", "quvnoq", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Satış\" o‘zbekchada nima?",
+      "answers": ["sotish", "xarid qilish", "saqlash", "yuborish"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Sene\" o‘zbekchada nima?",
+      "answers": ["yil", "oy", "hafta", "kun"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Sıradan\" o‘zbekchada nima?",
+      "answers": ["oddiy, hammaga o‘xshash", "ajoyib", "qiziqarli", "muhtasham"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Sinyal\" o‘zbekchada nima?",
+      "answers": ["signal", "ovoz", "nur", "to‘lqin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Siyah\" o‘zbekchada nima?",
+      "answers": ["qora", "oq", "qizil", "ko‘k"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Takım\" o‘zbekchada nima?",
+      "answers": ["jamoa", "guruh", "odamlar", "musobaqa"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Takma\" o‘zbekchada nima?",
+      "answers": ["taxallus", "ism", "familiya", "unvon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Tavan\" o‘zbekchada nima?",
+      "answers": ["shift", "devor", "pol", "deraza"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Tavşan\" o‘zbekchada nima?",
+      "answers": ["quyon", "sichqon", "toshbaqa", "qush"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Teleskop\" o‘zbekchada nima?",
+      "answers": ["teleskop", "mikroskop", "durbin", "soat"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Toplantı\" o‘zbekchada nima?",
+      "answers": ["majlis", "kongress", "musobaqa", "kampaniya"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Tür\" o‘zbekchada nima?",
+      "answers": ["tur, nav, xil", "miqdor", "sifat", "rang"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Ünvan\" o‘zbekchada nima?",
+      "answers": ["manzil", "unvon", "ism", "taxallus"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Usta\" o‘zbekchada nima?",
+      "answers": ["usta", "shogird", "ishchi", "dehqon"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Vasīta\" o‘zbekchada nima?",
+      "answers": ["vosita", "maqsad", "natija", "usul"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Yazar\" o‘zbekchada nima?",
+      "answers": ["yozuvchi", "o‘qituvchi", "shoir", "olim"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Yolculuk\" o‘zbekchada nima?",
+      "answers": ["sayohat", "ish", "uxlash", "ovqatlanish"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Yöresel\" o‘zbekchada nima?",
+      "answers": ["mahalliy", "umumiy", "xorijiy", "sokin"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Zencefil\" o‘zbekchada nima?",
+      "answers": ["zanjabil", "qalampir", "murch", "sarimsoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Adım atmak\" o‘zbekchada nima?",
+      "answers": ["qadam tashlamoq", "to‘xtamoq", "yugurmoq", "sakramoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Affetmek\" o‘zbekchada nima?",
+      "answers": ["kechirmoq", "ayblamoq", "jazolamoq", "rad etmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Atanmak\" o‘zbekchada nima?",
+      "answers": ["tayinlanmoq", "ishlamoq", "ketmoq", "qolmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Bastırmak\" o‘zbekchada nima?",
+      "answers": ["bostirmoq", "qo‘shmoq", "ko‘tarmoq", "yordam bermoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Başvurmak\" o‘zbekchada nima?",
+      "answers": ["topshirmoq", "rad etmoq", "kutmoq", "yubormoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Doğmak\" o‘zbekchada nima?",
+      "answers": ["tug‘ilmoq", "o‘lmoq", "yashamoq", "ketmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Düşürmek\" o‘zbekchada nima?",
+      "answers": ["tushirmoq", "ko‘tarmoq", "ushlamoq", "qo‘ymoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Gönüllü olmak\" o‘zbekchada nima?",
+      "answers": ["ko‘ngilli bo‘lmoq", "rad etmoq", "majburlanmoq", "kutmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İlerlemek\" o‘zbekchada nima?",
+      "answers": ["ilgarilamoq, rivojlanmoq, davom etmoq", "orqaga qaytmoq", "to‘xtamoq", "boshlamoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"İncelemek\" o‘zbekchada nima?",
+      "answers": ["mayda detallarigacha tadqiq qilmoq, tekshirmoq", "o‘qimoq", "yozmoq", "eslamoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Katılmak\" o‘zbekchada nima?",
+      "answers": ["qo‘shilmoq, ishtirok etmoq", "ketmoq", "rad etmoq", "kutmok"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Kazanmak\" o‘zbekchada nima?",
+      "answers": ["g‘alaba qozonmoq", "yo‘qotmoq", "bermoq", "olmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Keşfetmek\" o‘zbekchada nima?",
+      "answers": ["kashf qilmoq", "yashirmoq", "saqlamoq", "buzmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Mezun olmak\" o‘zbekchada nima?",
+      "answers": ["bitirmoq (litsey, universitetni tugatmoq)", "boshlamoq", "o‘qimoq", "ishlamoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Tüketmek\" o‘zbekchada nima?",
+      "answers": ["iste’mol qilmoq", "saqlamoq", "yaratmoq", "to‘kmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Ünlü olmak\" o‘zbekchada nima?",
+      "answers": ["mashhur bo‘lmoq", "noma’lum qolmoq", "ishlamoq", "sayohat qilmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Vazgeçmek\" o‘zbekchada nima?",
+      "answers": ["voz kechmoq", "davom etmoq", "qatnashmoq", "kutmoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Yerleşmek\" o‘zbekchada nima?",
+      "answers": ["joylashmoq", "ketmoq", "yubormoq", "to‘xtamoq"],
+      "correct_answer": 0,
+      "time": 10
+    },
+    {
+      "question": "\"Yayımlamak\" o‘zbekchada nima?",
+      "answers": ["nashr qilmoq", "yashirmoq", "saqlamoq", "o‘chiramoq"],
+      "correct_answer": 0,
+      "time": 10
     }
   ]
 }
